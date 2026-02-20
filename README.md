@@ -1,71 +1,67 @@
 # privacy-policy
 
-This privacy policy applies to the 모여봐요 도감 app (hereby referred to as "Application") for mobile devices that was created by thenovary (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".
+This Privacy Policy applies to the “모여봐요 도감” mobile application (the "Application") developed by thenovary (the "Developer").
 
+1. Overview
+The Application is an Animal Crossing collection guide app. 
+The Application does not require user registration and does not operate its own servers. 
+All user-created data (such as collection progress and settings) is stored locally on the user's device.
 
-Information Collection and Use
-The Application collects information when you download and use it. This information may include information such as
+2. Information Collection and Use
 
-Your device's Internet Protocol address (e.g. IP address)
-The pages of the Application that you visit, the time and date of your visit, the time spent on those pages
-The time spent on the Application
-The operating system you use on your mobile device
+The Developer does not directly collect, store, or process personal information from users.
 
-The Application does not gather precise information about the location of your mobile device.
+However, the Application uses third-party services that may automatically collect certain information for advertising and in-app purchase functionality.
 
+This information may include:
+- Device information
+- Advertising ID
+- App usage data
+- Purchase information (for in-app purchases)
+- IP address (collected by third-party services)
 
-The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.
+3. Third-Party Services
 
+The Application uses the following third-party services:
 
-For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to None. The information that the Service Provider request will be retained by them and used as described in this privacy policy.
+- Google Play Services
+- Google AdMob (for advertisements)
+- Google Play Billing (for in-app purchases)
 
+These services may collect and process data in accordance with their own Privacy Policies.
 
-Third Party Access
-Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+4. Data Storage
 
+All collection progress, settings, and user data within the Application are stored locally on the user’s device. 
+The Developer does not have access to this data.
 
-Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
+5. Data Sharing
 
-Google Play Services
-AdMob
+The Developer does not sell, trade, or share personal information with third parties.
 
-The Service Provider may disclose User Provided and Automatically Collected Information:
+Data may be processed by third-party services strictly for advertising and billing purposes as described above.
 
-as required by law, such as to comply with a subpoena, or similar legal process;
-when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
-with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
+6. Children’s Privacy
 
-Opt-Out Rights
-You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+The Application is not specifically directed toward children under the age of 13. 
+The Developer does not knowingly collect personal information from children.
 
+7. Data Retention
 
-Data Retention Policy
-The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at infodeskline@gmail.com and they will respond in a reasonable time.
+Since user data is stored locally on the device, users may delete all data by uninstalling the Application.
 
+8. Security
 
-Children
-The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
+Because the Developer does not operate servers or store personal information, there is no remote storage of user data by the Developer.
 
+9. Changes
 
-The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (infodeskline@gmail.com) so that they will be able to take the necessary actions.
+This Privacy Policy may be updated if necessary. Any changes will be reflected on this page.
 
+Effective Date: 2026-02-20
 
-Security
-The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.
+10. Contact
 
+If you have any questions regarding this Privacy Policy, please contact:
 
-Changes
-This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
-
-
-This privacy policy is effective as of 2026-02-10
-
-
-Your Consent
-By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.
-
-
-Contact Us
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at infodeskline@gmail.com.
-
-This privacy policy page was generated by App Privacy Policy Generator
+Email: infodeskline@gmail.com

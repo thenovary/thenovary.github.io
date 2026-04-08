@@ -1,6 +1,7 @@
 {
   "nav": {
     "apps": "앱",
+    "about": "소개",
     "license": "라이선스",
     "contact": "문의"
   },
@@ -8,6 +9,7 @@
     "eyebrow": "가장 선명한 시작",
     "headline1": "Pure Innovation,",
     "headline2": "Pure Experience.",
+    "headlineNote": "본질에 집중한 혁신, 군더더기 없는 경험.",
     "subtitle": "thenovary는 새로운 가치를 탐구하고, 이를 앱이라는 도구로 구체화하는 브랜드 스튜디오입니다. 우리는 단편적인 기능을 넘어, 하나의 유기적인 브랜드로서 당신의 디지털 라이프를 새롭게 정의합니다.",
     "ctaPrimary": "앱 살펴보기",
     "ctaSecondary": "문의하기",

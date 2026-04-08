@@ -21,7 +21,39 @@ const lang = getLang(Astro.params.lang);
 const localizedName = getLocalizedName(app.name, lang);
 
 const email = app.support?.email ?? 'infodeskline@gmail.com';
-const sections = app.support?.sections ?? [];
+const defaultSections = [
+  {
+    title: {
+      ko: '자주 묻는 질문',
+      en: 'Frequently Asked Questions',
+    },
+    content: {
+      ko: `${localizedName} 사용 중 문제가 발생하거나 궁금한 점이 있으시면 아래 이메일로 문의해 주세요. 최대한 빠르게 답변 드리겠습니다.`,
+      en: `If you experience any issues or have questions while using ${localizedName}, please contact us via email below. We'll get back to you as soon as possible.`,
+    },
+  },
+  {
+    title: {
+      ko: '데이터 관련 문제',
+      en: 'Data-related Issues',
+    },
+    content: {
+      ko: '앱을 재설치하면 기기에 저장된 데이터가 삭제될 수 있습니다. 데이터 복구는 지원되지 않으므로 중요한 기록은 미리 백업해 두시기 바랍니다.',
+      en: 'Reinstalling the app may delete data stored on your device. Data recovery is not supported, so please back up important records in advance.',
+    },
+  },
+  {
+    title: {
+      ko: '버그 신고',
+      en: 'Bug Reports',
+    },
+    content: {
+      ko: '버그 발견 시 기기 모델, OS 버전, 앱 버전과 함께 문의 이메일로 신고해 주시면 빠른 수정에 도움이 됩니다.',
+      en: 'If you find a bug, please report it to our support email along with your device model, OS version, and app version. This helps us fix issues faster.',
+    },
+  },
+];
+const sections = app.support?.sections?.length ? app.support.sections : defaultSections;
 ---
 
 <Layout

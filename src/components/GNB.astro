@@ -23,6 +23,7 @@ const enUrl = currentPath.replace(/^\/(ko|en)(\/|$)/, '/en$2') || '/en/';
 
 const navLinks = [
   { href: `/${lang}/#apps`, activeCheck: `/${lang}/`, label: t(lang, 'nav.apps') },
+  { href: `/${lang}/about/`, activeCheck: `/${lang}/about/`, label: t(lang, 'nav.about') },
   { href: `/${lang}/contact/`, activeCheck: `/${lang}/contact/`, label: t(lang, 'nav.contact') },
 ];
 ---

@@ -6,6 +6,6 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   redirects: {
-    '/': '/ko/',
+    '/': '/en/',
   },
 });

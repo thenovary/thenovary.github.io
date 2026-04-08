@@ -13,7 +13,76 @@ export function getStaticPaths() {
 }
 
 const lang = getLang(Astro.params.lang);
+const isKo = lang === 'ko';
 const email = 'infodeskline@gmail.com';
+
+const contactEyebrow = isKo ? '메시지 보내기' : 'Send a Message';
+const contactHeading = isKo
+  ? '작은 메시지로 시작되는 연결.'
+  : 'Connections that start with a small message.';
+const contactLead = isKo
+  ? '앱에 대한 의견, 협업 제안, 브랜드에 대한 문의까지.\nthenovary는 좋은 아이디어가 대화에서 시작된다고 믿습니다.'
+  : 'From app feedback to collaboration ideas and brand questions,\nthenovary believes the best ideas often begin with a conversation.';
+
+const contactTopics = isKo
+  ? [
+      {
+        title: '앱 피드백',
+        desc: '작은 불편함, 개선 아이디어, 사용 경험을 편하게 들려주세요.',
+      },
+      {
+        title: '협업 제안',
+        desc: '함께 만들 수 있는 프로젝트나 파트너십 제안도 환영합니다.',
+      },
+      {
+        title: '브랜드 문의',
+        desc: 'thenovary가 만드는 방향과 작업 방식에 대한 질문도 좋습니다.',
+      },
+    ]
+  : [
+      {
+        title: 'App Feedback',
+        desc: 'Share any friction points, improvement ideas, or product impressions.',
+      },
+      {
+        title: 'Collaborations',
+        desc: 'Project ideas and thoughtful partnership proposals are always welcome.',
+      },
+      {
+        title: 'Brand Questions',
+        desc: 'Reach out about how thenovary works, thinks, and builds.',
+      },
+    ];
+
+const contactPanelKicker = isKo ? '이메일 문의' : 'Direct Email';
+const contactPanelTitle = isKo
+  ? '가장 빠른 연락 방법은\n이메일입니다.'
+  : 'Email is the fastest way to reach us.';
+const contactPanelText = isKo
+  ? '간단한 소개와 함께 문의 내용을 보내주시면\n확인 후 순차적으로 답변드릴게요.'
+  : 'Send a short introduction with your message and we will reply in turn after reviewing it.';
+
+const contactGuides = isKo
+  ? [
+      {
+        label: '환영하는 문의',
+        value: '앱 피드백, 협업 제안,\n브랜드 관련 메시지',
+      },
+      {
+        label: '함께 보내주면 좋아요',
+        value: '관련 앱 이름, 상황 설명, 원하는 답변 방향',
+      },
+    ]
+  : [
+      {
+        label: 'Best for',
+        value: 'app feedback, collaborations, and brand-related questions',
+      },
+      {
+        label: 'Helpful details',
+        value: 'the app name, context, and what kind of reply you need',
+      },
+    ];
 ---
 
 <Layout
@@ -21,23 +90,51 @@ const email = 'infodeskline@gmail.com';
   title={t(lang, 'contact.title')}
   description={t(lang, 'contact.subtitle')}
 >
-  <section class="section contact-page">
+  <section class="section contact-page" data-lang={lang}>
     <div class="container">
-      <div class="contact-card glass-card">
-        <h1 class="contact-title">{t(lang, 'contact.title')}</h1>
-        <p class="contact-subtitle">{t(lang, 'contact.subtitle')}</p>
+      <div class="contact-layout">
+        <div class="contact-copy">
+          <p class="contact-eyebrow">{contactEyebrow}</p>
+          <h1 class="contact-title">{contactHeading}</h1>
+          <p class="contact-lead">{contactLead}</p>
 
-        <div class="email-row">
-          <span class="email-label">{t(lang, 'contact.emailLabel')}</span>
-          <a href={`mailto:${email}`} class="email-address">{email}</a>
+          <div class="contact-topics">
+            {contactTopics.map((topic, index) => (
+              <article class="contact-topic-card">
+                <span class="contact-topic-index">{String(index + 1).padStart(2, '0')}</span>
+                <h2 class="contact-topic-title">{topic.title}</h2>
+                <p class="contact-topic-desc">{topic.desc}</p>
+              </article>
+            ))}
+          </div>
         </div>
 
-        <a
-          href={`mailto:${email}`}
-          class="btn btn-primary contact-btn"
-        >
-          {t(lang, 'contact.emailButton')}
-        </a>
+        <aside class="contact-panel glass-card">
+          <p class="contact-panel-kicker">{contactPanelKicker}</p>
+          <h2 class="contact-panel-title">{contactPanelTitle}</h2>
+          <p class="contact-panel-text">{contactPanelText}</p>
+
+          <a href={`mailto:${email}`} class="contact-email-box">
+            <span class="contact-email-label">{t(lang, 'contact.emailLabel')}</span>
+            <span class="contact-email-value">{email}</span>
+          </a>
+
+          <a
+            href={`mailto:${email}`}
+            class="btn btn-primary contact-btn"
+          >
+            {t(lang, 'contact.emailButton')}
+          </a>
+
+          <div class="contact-guides">
+            {contactGuides.map((item) => (
+              <div class="contact-guide-card">
+                <span class="contact-guide-label">{item.label}</span>
+                <p class="contact-guide-value">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -45,71 +142,321 @@ const email = 'infodeskline@gmail.com';
 
 <style>
   .contact-page {
-    display: flex;
-    align-items: center;
-    min-height: calc(80vh - var(--gnb-height));
+    padding-top: var(--space-2xl);
     padding-bottom: var(--space-3xl);
+    min-height: calc(80vh - var(--gnb-height));
   }
 
-  .container {
-    width: 100%;
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+    gap: clamp(28px, 4vw, 48px);
+    align-items: start;
   }
 
-  .contact-card {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: var(--space-2xl) var(--space-xl);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-lg);
+  .contact-copy {
+    max-width: 680px;
+  }
+
+  .contact-page[data-lang='en'] .contact-copy {
+    max-width: 820px;
+  }
+
+  .contact-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
   }
 
   .contact-title {
-    font-size: clamp(28px, 5vw, 40px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-size: clamp(28px, 4.2vw, 44px);
+    line-height: 1.04;
+    letter-spacing: -0.05em;
     color: var(--color-text-primary);
+    max-width: 13ch;
+    margin-bottom: 12px;
   }
 
-  .contact-subtitle {
-    font-size: 16px;
-    color: var(--color-text-secondary);
+  .contact-page[data-lang='en'] .contact-title {
+    max-width: none;
+  }
+
+  .contact-lead {
+    font-size: 15px;
     line-height: 1.7;
-    margin-top: calc(-1 * var(--space-sm));
+    color: var(--color-text-secondary);
+    max-width: 46ch;
+    white-space: pre-line;
   }
 
-  .email-row {
+  .contact-page[data-lang='en'] .contact-lead {
+    max-width: none;
+  }
+
+  .contact-topics {
+    margin-top: var(--space-xl);
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-    width: 100%;
+    gap: 14px;
   }
 
-  .email-label {
-    font-size: 12px;
-    font-weight: 600;
+  .contact-topic-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 4px;
+    align-items: start;
+    padding: 18px 18px 18px 16px;
+    border-radius: 22px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.68)),
+      rgba(255, 255, 255, 0.66);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 26px rgba(91, 92, 255, 0.08);
+  }
+
+  .contact-topic-index {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background:
+      linear-gradient(135deg, rgba(91, 92, 255, 0.12), rgba(255, 255, 255, 0.82) 56%, rgba(0, 210, 255, 0.12));
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 18px rgba(91, 92, 255, 0.06);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    grid-row: 1 / span 2;
+  }
+
+  .contact-topic-title {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin-top: 2px;
+  }
+
+  .contact-topic-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  .contact-panel {
+    position: relative;
+    position: sticky;
+    top: calc(var(--gnb-height) + 24px);
+    padding: clamp(24px, 4vw, 34px);
+    overflow: hidden;
+  }
+
+  .contact-panel::before {
+    content: '';
+    position: absolute;
+    top: -14%;
+    right: -10%;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(91, 92, 255, 0.16) 0%, rgba(91, 92, 255, 0) 70%);
+    pointer-events: none;
+  }
+
+  .contact-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -18%;
+    left: -12%;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.14) 0%, rgba(0, 210, 255, 0) 74%);
+    pointer-events: none;
+  }
+
+  .contact-panel-kicker,
+  .contact-panel-title,
+  .contact-panel-text,
+  .contact-email-box,
+  .contact-btn,
+  .contact-guides {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-panel-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-panel-title {
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: var(--color-text-primary);
+    margin-bottom: 12px;
+    max-width: 14ch;
+    white-space: pre-line;
+  }
+
+  .contact-panel-text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+    max-width: 34ch;
+    white-space: pre-line;
+  }
+
+  .contact-email-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 20px;
+    border-radius: 22px;
+    background:
+      linear-gradient(135deg, rgba(91, 92, 255, 0.08), rgba(255, 255, 255, 0.88) 42%, rgba(0, 210, 255, 0.08)),
+      rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 14px 28px rgba(91, 92, 255, 0.08);
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-email-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--color-text-tertiary);
   }
 
-  .email-address {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-accent);
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    transition: color var(--duration-fast) var(--ease-smooth);
-  }
-
-  .email-address:hover {
-    color: var(--color-accent-hover);
+  .contact-email-value {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    word-break: break-word;
   }
 
   .contact-btn {
     width: 100%;
     justify-content: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-guides {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .contact-guide-card {
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+  }
+
+  .contact-guide-label {
+    display: inline-flex;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+  }
+
+  .contact-guide-value {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    white-space: pre-line;
+  }
+
+  @media (max-width: 900px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .contact-copy {
+      max-width: none;
+    }
+
+    .contact-panel {
+      position: relative;
+      top: auto;
+    }
+
+    .contact-title,
+    .contact-lead,
+    .contact-panel-title,
+    .contact-panel-text {
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contact-page {
+      padding-top: var(--space-xl);
+    }
+
+    .contact-title {
+      font-size: clamp(24px, 7vw, 34px);
+    }
+
+    .contact-lead {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .contact-topic-card,
+    .contact-email-box,
+    .contact-guide-card {
+      border-radius: 18px;
+    }
+
+    .contact-topic-card {
+      grid-template-columns: 38px minmax(0, 1fr);
+      column-gap: 12px;
+      padding: 16px 14px;
+    }
+
+    .contact-topic-index {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      font-size: 10px;
+    }
+
+    .contact-topic-title {
+      font-size: 18px;
+    }
+
+    .contact-panel {
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .contact-email-value {
+      font-size: 16px;
+    }
+
+    .contact-guides {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

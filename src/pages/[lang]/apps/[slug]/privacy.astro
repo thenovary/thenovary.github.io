@@ -46,8 +46,9 @@ const sections = app.privacy?.sections ?? [];
 
       <!-- Legal language notice -->
       <div class="legal-notice">
-        <p class="legal-notice-en">This document is written in Korean for legal clarity. Please use your browser's translation feature for other languages.</p>
-        <p class="legal-notice-ko">법적 명확성을 위해 한국어로 작성되었습니다. 타 언어는 브라우저 번역 기능을 이용해 주세요.</p>
+        <p class="legal-notice-en">This document is written in Korean for legal clarity. Any translation into another language, including browser-generated translations, is provided for convenience only.
+In the event of any discrepancy in translation or interpretation, the Korean original shall prevail.</p>
+        <p class="legal-notice-ko">본 문서는 법적 명확성을 위해 한국어로 작성되었습니다. 다른 언어 번역문(브라우저 자동 번역 포함)은 이용자의 편의를 위한 참고용이며, 번역 또는 해석상 차이가 있는 경우 한국어 원문을 우선합니다.</p>
       </div>
 
       {lastUpdated && (
@@ -139,6 +140,7 @@ const sections = app.privacy?.sections ?? [];
     font-size: 13px;
     color: var(--color-text-secondary);
     line-height: 1.5;
+    white-space: pre-line;
   }
 
   .legal-notice-ko {

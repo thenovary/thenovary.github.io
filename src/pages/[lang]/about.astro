@@ -59,9 +59,14 @@ const isKo = lang === 'ko';
             <span class="origin-token-meta">Root 01</span>
             <strong class="origin-token-word">nova</strong>
             <p class="origin-token-desc">
-              {isKo
-                ? '새로운 것, 혁신, 폭발적인 시작'
-                : 'Something new, innovation, an explosive beginning'}
+              {isKo ? (
+                <>
+                  <span class="origin-token-desc-desktop">새로운 것, 혁신, 폭발적인 시작</span>
+                  <span class="origin-token-desc-mobile">새로운 것, 혁신,<br />폭발적인 시작</span>
+                </>
+              ) : (
+                'Something new, innovation, an explosive beginning'
+              )}
             </p>
           </article>
 
@@ -71,9 +76,14 @@ const isKo = lang === 'ko';
             <span class="origin-token-meta">Root 02</span>
             <strong class="origin-token-word">-ary</strong>
             <p class="origin-token-desc">
-              {isKo
-                ? '그러한 성격을 가진, ~에 속한'
-                : 'Of or relating to, having the quality of'}
+              {isKo ? (
+                <>
+                  <span class="origin-token-desc-desktop">그러한 성격을 가진, ~에 속한</span>
+                  <span class="origin-token-desc-mobile">그러한 성격을 가진,<br />~에 속한</span>
+                </>
+              ) : (
+                'Of or relating to, having the quality of'
+              )}
             </p>
           </article>
         </div>
@@ -303,6 +313,14 @@ const isKo = lang === 'ko';
     color: var(--color-text-secondary);
     line-height: 1.6;
     max-width: 24ch;
+  }
+
+  .origin-token-desc-desktop {
+    display: block;
+  }
+
+  .origin-token-desc-mobile {
+    display: none;
   }
 
   .origin-operator {
@@ -708,6 +726,14 @@ const isKo = lang === 'ko';
     .origin-token-desc {
       font-size: 12px;
       line-height: 1.45;
+    }
+
+    .origin-token-desc-desktop {
+      display: none;
+    }
+
+    .origin-token-desc-mobile {
+      display: block;
     }
 
     .origin-operator {

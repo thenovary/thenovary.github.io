@@ -67,6 +67,7 @@ const contactGuides = isKo
       {
         label: '환영하는 문의',
         value: '앱 피드백, 협업 제안,\n브랜드 관련 메시지',
+        mobileValue: '앱 피드백, 협업 제안, 브랜드 관련 메시지',
       },
       {
         label: '함께 보내주면 좋아요',
@@ -130,7 +131,14 @@ const contactGuides = isKo
             {contactGuides.map((item) => (
               <div class="contact-guide-card">
                 <span class="contact-guide-label">{item.label}</span>
-                <p class="contact-guide-value">{item.value}</p>
+                <p class="contact-guide-value">
+                  <span class={`contact-guide-value-desktop${'mobileValue' in item ? ' contact-guide-value-desktop--mobile-alt' : ''}`}>
+                    {item.value}
+                  </span>
+                  {'mobileValue' in item && (
+                    <span class="contact-guide-value-mobile">{item.mobileValue}</span>
+                  )}
+                </p>
               </div>
             ))}
           </div>
@@ -384,7 +392,15 @@ const contactGuides = isKo
     font-size: 14px;
     line-height: 1.65;
     color: var(--color-text-secondary);
+  }
+
+  .contact-guide-value-desktop {
+    display: block;
     white-space: pre-line;
+  }
+
+  .contact-guide-value-mobile {
+    display: none;
   }
 
   @media (max-width: 900px) {
@@ -457,6 +473,14 @@ const contactGuides = isKo
 
     .contact-guides {
       grid-template-columns: 1fr;
+    }
+
+    .contact-guide-value-desktop--mobile-alt {
+      display: none;
+    }
+
+    .contact-guide-value-mobile {
+      display: block;
     }
   }
 </style>

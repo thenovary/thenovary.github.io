@@ -17,13 +17,9 @@
     "en": "Reading Beyond the Pages. deepread.\n\nWant to preserve every moment of your reading journey as meaningful data?\ndeepread is your smart reading companion — helping you build a deeper, richer reading life.\n\n✨ Your Smart Personal Library\n· Quickly add books by title, author, or ISBN search.\n· Organize your bookshelf by status: Reading, Finished, Wishlist, or DNF.\n\n📝 Detailed Reading Records\n· Log pages read, reading time, daily notes, and mood — all in one flow.\n· Turn your favorite quotes into beautifully designed cards to share on social media.\n\n📊 Visualize Your Reading Habits\n· Track your reading patterns with stats and a calendar view.\n· Get monthly and yearly reports with genre breakdowns and personal insights.\n\n🎨 Make It Yours\n· Choose light or dark mode, and personalize your accent color.\n· Enjoy multilingual support and secure local backup & restore.\n(Supported languages: English, German, Portuguese, French, Spanish, Italian, Korean, Japanese)\n\nPerfect for you if you...\n· Want to capture the lasting impression of every book you read\n· Love seeing your reading data as beautiful charts and statistics\n· Enjoy preserving meaningful quotes in your own unique design\n\nStart deepread today and build the personal library only you could create!"
   },
   "screenshots": { "ko": 9, "en": 9 },
-  "platforms": ["android"],
-  "platformsNote": {
-    "ko": "iOS 출시 예정",
-    "en": "iOS coming soon"
-  },
+  "platforms": ["ios", "android"],
   "links": {
-    "appStore": "",
+    "appStore": "https://apps.apple.com/app/deepread-reading-tracker/id6762040668",
     "googlePlay": "https://play.google.com/store/apps/details?id=com.thenovary.deepread"
   },
   "privacy": {

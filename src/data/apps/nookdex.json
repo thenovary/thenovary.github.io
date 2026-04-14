@@ -4,17 +4,17 @@
   "icon": "/icons/nookdex.png",
   "name": {
     "default": "NookDex",
-    "ko": "모여봐요 도감",
+    "ko": "NookDex",
     "en": "NookDex",
-    "ja": "あつ森手帳"
+    "ja": "NookDex"
   },
   "tagline": {
     "ko": "모여봐요 동물의 숲을 더 편하게 즐기기 위한 앱",
     "en": "Your companion app for Animal Crossing"
   },
   "description": {
-    "ko": "NookDex는 모여봐요 동물의 숲 플레이를 더 편리하게 기록하고 관리할 수 있도록 도와주는 비공식 동반 앱입니다.\n\n주민, 물고기, 곤충, 해산물, 아이템, 레시피 정보를 한곳에서 보고, 내가 이미 모은 것과 아직 부족한 것을 쉽게 확인할 수 있습니다.\n\n주요 기능\n• 주민, 생물, 아이템, 레시피 도감 제공\n• 카테고리별 수집 현황 체크 및 진행률 관리\n• 북반구/남반구와 월별 출현 정보 확인\n• 미수집 항목만 골라서 보기\n• 주민 목록, 위시리스트, 최애 주민 관리\n• 여권 스타일 프로필 카드 저장\n• 한국어, 영어, 일본어 지원\n• 다크 모드 및 테마 커스터마이징 지원\n\n회원가입 없이 바로 사용할 수 있어, 개인 기록과 컬렉션 관리에 부담 없이 집중할 수 있습니다.\n\nNookDex는 모여봐요 동물의 숲을 위한 비공식 팬 앱이며, Nintendo Co., Ltd. 또는 그 계열사와 제휴, 후원, 승인 관계가 없습니다.",
-    "en": "NookDex is an unofficial companion app for Animal Crossing: New Horizons, built to make island life easier to track and more enjoyable.\n\nBrowse villagers, fish, bugs, sea creatures, items, and recipes in one place, then quickly see what you have collected and what you still need.\n\nFeatures\n• Browse compendiums for villagers, critters, items, and recipes\n• Track collection progress by category\n• Check availability by hemisphere and month, including uncollected-only views\n• Manage residents, wishlists, and favorite villagers\n• Create and save passport-style profile cards\n• Supports Korean, English, Japanese, dark mode, and theme customization\n\nYou can start without signing up, so it is easy to focus on your own records and collection tracking right away.\n\nNookDex is an unofficial fan-made app for Animal Crossing: New Horizons and is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd. or its affiliates."
+    "ko": "NookDex는 모여봐요 동물의 숲 플레이를 더 편리하게 기록하고 관리할 수 있도록 도와주는 비공식 동반 앱입니다.\n\n주민, 물고기, 곤충, 해산물, 아이템, 레시피 정보를 한곳에서 보고, 내가 이미 모은 것과 아직 부족한 것을 쉽게 확인할 수 있습니다.\n\n주요 기능\n• 주민, 생물, 아이템, 레시피 도감 제공\n• 카테고리별 수집 현황 체크 및 진행률 관리\n• 북반구/남반구와 월별 출현 정보 확인\n• 미수집 항목만 골라서 보기\n• 주민 목록, 위시리스트, 최애 주민 관리\n• 여권 스타일 프로필 카드 저장\n• 좋아하는 주민 순위를 직접 정하고 나만의 랭킹 만들기\n• 토너먼트 모드로 가장 좋아하는 주민 찾기\n• 한국어, 영어, 일본어 지원\n• 다크 모드 및 테마 커스터마이징 지원\n\n회원가입 없이 바로 사용할 수 있어, 개인 기록과 컬렉션 관리에 부담 없이 집중할 수 있습니다.\n\nNookDex는 모여봐요 동물의 숲을 위한 비공식 팬 앱이며, Nintendo Co., Ltd. 또는 그 계열사와 제휴, 후원, 승인 관계가 없습니다.",
+    "en": "NookDex is an unofficial companion app for Animal Crossing: New Horizons, built to make island life easier to track and more enjoyable.\n\nBrowse villagers, fish, bugs, sea creatures, items, and recipes in one place, then quickly see what you have collected and what you still need.\n\nFeatures\n• Browse compendiums for villagers, critters, items, and recipes\n• Track collection progress by category\n• Check availability by hemisphere and month, including uncollected-only views\n• Manage residents, wishlists, and favorite villagers\n• Create and save passport-style profile cards\n• Rank your favorite villagers and build your own personal rankings\n• Discover your top favorite villager through tournament mode\n• Supports Korean, English, Japanese, dark mode, and theme customization\n\nYou can start without signing up, so it is easy to focus on your own records and collection tracking right away.\n\nNookDex is an unofficial fan-made app for Animal Crossing: New Horizons and is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd. or its affiliates."
   },
   "screenshots": { "ko": 9, "en": 9 },
   "platforms": ["android"],
@@ -68,7 +68,7 @@
           "en": "Advertising and Payments"
         },
         "content": {
-          "ko": "모여봐요 도감은 앱 일부 영역에서 Google AdMob을 통해 광고를 표시할 수 있습니다. 광고 제공업체는 자체 개인정보 처리방침에 따라 기기 정보, 광고 식별자, IP 주소, 앱 상호작용 데이터 등을 자동으로 처리할 수 있습니다. 앱 내 결제를 하는 경우 결제 처리와 복원은 Apple App Store 또는 Google Play Billing을 통해 이루어집니다. 모여봐요 도감은 유료 기능 잠금 해제를 유지하기 위해 구매 상태를 기기에 로컬로 저장할 수 있습니다.",
+          "ko": "NookDex는 앱 일부 영역에서 Google AdMob을 통해 광고를 표시할 수 있습니다. 광고 제공업체는 자체 개인정보 처리방침에 따라 기기 정보, 광고 식별자, IP 주소, 앱 상호작용 데이터 등을 자동으로 처리할 수 있습니다. 앱 내 결제를 하는 경우 결제 처리와 복원은 Apple App Store 또는 Google Play Billing을 통해 이루어집니다. NookDex는 유료 기능 잠금 해제를 유지하기 위해 구매 상태를 기기에 로컬로 저장할 수 있습니다.",
           "en": "NookDex may display advertisements in certain areas of the app via Google AdMob. Ad providers may automatically process device information, advertising identifiers, IP addresses, app interaction data, and similar information in accordance with their own privacy policies. When in-app purchases are made, payment processing and restoration are handled through Apple App Store or Google Play Billing. NookDex may store purchase status locally on the device in order to maintain access to unlocked paid features."
         }
       },
@@ -166,7 +166,7 @@
           "en": "Article 1. Purpose"
         },
         "content": {
-          "ko": "본 약관은 thenovary(이하 \"운영자\")이 제공하는 모바일 애플리케이션 \"모여봐요 도감(NookDex)\" 및 이에 부수하는 관련 서비스(이하 \"서비스\")의 이용과 관련하여 운영자와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.",
+          "ko": "본 약관은 thenovary(이하 \"운영자\")이 제공하는 모바일 애플리케이션 \"NookDex\" 및 이에 부수하는 관련 서비스(이하 \"서비스\")의 이용과 관련하여 운영자와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.",
           "en": "The purpose of these Terms of Service is to set forth the rights, obligations, responsibilities, and other necessary matters between thenovary (hereinafter \"Operator\") and users in connection with the use of the mobile application \"NookDex\" and related services (hereinafter \"Service\") provided by the Operator."
         }
       },

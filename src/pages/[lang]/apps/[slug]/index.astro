@@ -54,23 +54,23 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
         <!-- Desktop download buttons (hidden on mobile) -->
         <div class="download-row desktop-only">
           {app.links?.appStore ? (
-            <a href={app.links.appStore} class="btn download-btn download-btn-glass" target="_blank" rel="noopener noreferrer">
+            <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
               <span class="download-label">{t(lang, 'app.downloadOn')}</span>
               <span class="download-store">{t(lang, 'app.appStore')}</span>
             </a>
           ) : (
-            <span class="btn download-btn download-btn-glass btn-disabled">
+            <span class="btn btn-secondary download-btn btn-disabled">
               <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
               <span class="download-store">{t(lang, 'app.appStore')}</span>
             </span>
           )}
           {app.links?.googlePlay ? (
-            <a href={app.links.googlePlay} class="btn download-btn download-btn-glass" target="_blank" rel="noopener noreferrer">
+            <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
               <span class="download-label">{t(lang, 'app.downloadOn')}</span>
               <span class="download-store">{t(lang, 'app.googlePlay')}</span>
             </a>
           ) : (
-            <span class="btn download-btn download-btn-glass btn-disabled">
+            <span class="btn btn-secondary download-btn btn-disabled">
               <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
               <span class="download-store">{t(lang, 'app.googlePlay')}</span>
             </span>
@@ -115,23 +115,23 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
   <!-- Mobile floating download bar (outside container for correct fixed positioning) -->
   <div class="mobile-download-bar mobile-only">
     {app.links?.appStore ? (
-      <a href={app.links.appStore} class="btn download-btn download-btn-glass" target="_blank" rel="noopener noreferrer">
+      <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
         <span class="download-label">{t(lang, 'app.downloadOn')}</span>
         <span class="download-store">{t(lang, 'app.appStore')}</span>
       </a>
     ) : (
-      <span class="btn download-btn download-btn-glass btn-disabled">
+      <span class="btn btn-secondary download-btn btn-disabled">
         <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
         <span class="download-store">{t(lang, 'app.appStore')}</span>
       </span>
     )}
     {app.links?.googlePlay ? (
-      <a href={app.links.googlePlay} class="btn download-btn download-btn-glass" target="_blank" rel="noopener noreferrer">
+      <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
         <span class="download-label">{t(lang, 'app.downloadOn')}</span>
         <span class="download-store">{t(lang, 'app.googlePlay')}</span>
       </a>
     ) : (
-      <span class="btn download-btn download-btn-glass btn-disabled">
+      <span class="btn btn-secondary download-btn btn-disabled">
         <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
         <span class="download-store">{t(lang, 'app.googlePlay')}</span>
       </span>
@@ -240,24 +240,6 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
     justify-content: center;
     gap: 1px;
     padding: 7px 14px;
-  }
-
-  .download-btn-glass {
-    color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.82);
-    box-shadow:
-      0 10px 24px rgba(113, 132, 185, 0.16),
-      0 2px 6px rgba(255, 255, 255, 0.55) inset;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-  }
-
-  .download-btn-glass:hover {
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow:
-      0 14px 28px rgba(113, 132, 185, 0.2),
-      0 2px 8px rgba(255, 255, 255, 0.75) inset;
   }
 
   .download-label {

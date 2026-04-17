@@ -17,13 +17,9 @@
     "en": "NookDex is an unofficial companion app for Animal Crossing: New Horizons, built to make island life easier to track and more enjoyable.\n\nBrowse villagers, fish, bugs, sea creatures, items, and recipes in one place, then quickly see what you have collected and what you still need.\n\nFeatures\n• Browse compendiums for villagers, critters, items, and recipes\n• Track collection progress by category\n• Check availability by hemisphere and month, including uncollected-only views\n• Manage residents, wishlists, and favorite villagers\n• Create and save passport-style profile cards\n• Rank your favorite villagers and build your own personal rankings\n• Discover your top favorite villager through tournament mode\n• Supports Korean, English, Japanese, dark mode, and theme customization\n\nYou can start without signing up, so it is easy to focus on your own records and collection tracking right away.\n\nNookDex is an unofficial fan-made app for Animal Crossing: New Horizons and is not affiliated with, endorsed by, or sponsored by Nintendo Co., Ltd. or its affiliates."
   },
   "screenshots": { "ko": 9, "en": 9 },
-  "platforms": ["android"],
-  "platformsNote": {
-    "ko": "iOS 출시 예정",
-    "en": "iOS coming soon"
-  },
+  "platforms": ["ios", "android"],
   "links": {
-    "appStore": "",
+    "appStore": "https://apps.apple.com/us/app/nookdex/id6762195675",
     "googlePlay": "https://play.google.com/store/apps/details?id=com.thenovary.acnh_companion"
   },
   "privacy": {

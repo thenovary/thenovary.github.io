@@ -18,7 +18,7 @@ const lang = getLang(Astro.params.lang);
 const appFiles = import.meta.glob('../../data/apps/*.json', { eager: true });
 const apps = Object.values(appFiles)
   .map(m => (m as { default: unknown }).default ?? m)
-  .sort((a: any, b: any) => a.order - b.order);
+  .sort((a: any, b: any) => b.order - a.order);
 ---
 
 <Layout

@@ -3,13 +3,13 @@
  * App Support page
  * Route: /[lang]/apps/[slug]/support/
  */
-import RenewalLayout from '../../../../components/RenewalLayout.astro';
-import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
-import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
+import Version1Layout from '../../../../../components/Version1Layout.astro';
+import Version1AppSubNav from '../../../../../components/Version1AppSubNav.astro';
+import { getLang, t, getLocalizedName } from '../../../../../i18n/utils';
 
 export async function getStaticPaths() {
   const langs = ['ko', 'en'];
-  const appFiles = import.meta.glob('../../../../data/apps/*.json', { eager: true });
+  const appFiles = import.meta.glob('../../../../../data/apps/*.json', { eager: true });
   const apps = Object.values(appFiles).map((m: any) => m.default ?? m);
   return langs.flatMap(lang =>
     apps.map((app: any) => ({ params: { lang, slug: app.slug }, props: { app } }))
@@ -56,16 +56,15 @@ const defaultSections = [
 const sections = app.support?.sections?.length ? app.support.sections : defaultSections;
 ---
 
-<RenewalLayout
+<Version1Layout
   lang={lang}
-  basePath=""
   title={`${t(lang, 'appNav.support')} — ${localizedName}`}
   description={`${localizedName} ${t(lang, 'appNav.support')}`}
 >
   <section class="section support-page">
     <div class="container">
 
-      <a href={`/${lang}/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
+      <a href={`/${lang}/version1/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
 
       <div class="page-header">
         <img src={app.icon} alt={localizedName} class="app-icon" width="48" height="48" />
@@ -75,7 +74,7 @@ const sections = app.support?.sections?.length ? app.support.sections : defaultS
         </div>
       </div>
 
-      <RenewalAppSubNav lang={lang} slug={app.slug} active="support" basePath="" />
+      <Version1AppSubNav lang={lang} slug={app.slug} active="support" />
 
       <!-- Email contact card -->
       <div class="contact-card glass-card">
@@ -106,7 +105,7 @@ const sections = app.support?.sections?.length ? app.support.sections : defaultS
 
     </div>
   </section>
-</RenewalLayout>
+</Version1Layout>
 
 <style>
   .support-page {

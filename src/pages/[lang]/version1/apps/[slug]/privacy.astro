@@ -1,15 +1,15 @@
 ---
 /**
- * App Terms of Service page
- * Route: /[lang]/apps/[slug]/terms/
+ * App Privacy Policy page
+ * Route: /[lang]/apps/[slug]/privacy/
  */
-import RenewalLayout from '../../../../components/RenewalLayout.astro';
-import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
-import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
+import Version1Layout from '../../../../../components/Version1Layout.astro';
+import Version1AppSubNav from '../../../../../components/Version1AppSubNav.astro';
+import { getLang, t, getLocalizedName } from '../../../../../i18n/utils';
 
 export async function getStaticPaths() {
   const langs = ['ko', 'en'];
-  const appFiles = import.meta.glob('../../../../data/apps/*.json', { eager: true });
+  const appFiles = import.meta.glob('../../../../../data/apps/*.json', { eager: true });
   const apps = Object.values(appFiles).map((m: any) => m.default ?? m);
   return langs.flatMap(lang =>
     apps.map((app: any) => ({ params: { lang, slug: app.slug }, props: { app } }))
@@ -20,30 +20,29 @@ const { app } = Astro.props;
 const lang = getLang(Astro.params.lang);
 const localizedName = getLocalizedName(app.name, lang);
 
-const lastUpdated = app.terms?.lastUpdated?.[lang] ?? app.terms?.lastUpdated?.['ko'] ?? '';
-const sections = app.terms?.sections ?? [];
+const lastUpdated = app.privacy?.lastUpdated?.[lang] ?? app.privacy?.lastUpdated?.['ko'] ?? '';
+const sections = app.privacy?.sections ?? [];
 ---
 
-<RenewalLayout
+<Version1Layout
   lang={lang}
-  basePath=""
-  title={`${t(lang, 'appNav.terms')} — ${localizedName}`}
-  description={`${localizedName} ${t(lang, 'appNav.terms')}`}
+  title={`${t(lang, 'appNav.privacy')} — ${localizedName}`}
+  description={`${localizedName} ${t(lang, 'appNav.privacy')}`}
 >
   <section class="section legal-page">
     <div class="container">
 
-      <a href={`/${lang}/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
+      <a href={`/${lang}/version1/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
 
       <div class="page-header">
         <img src={app.icon} alt={localizedName} class="app-icon" width="48" height="48" />
         <div>
           <p class="app-name-label">{localizedName}</p>
-          <h1 class="page-title">{t(lang, 'appNav.terms')}</h1>
+          <h1 class="page-title">{t(lang, 'appNav.privacy')}</h1>
         </div>
       </div>
 
-      <RenewalAppSubNav lang={lang} slug={app.slug} active="terms" basePath="" />
+      <Version1AppSubNav lang={lang} slug={app.slug} active="privacy" />
 
       <!-- Legal language notice -->
       <div class="legal-notice">
@@ -78,7 +77,7 @@ In the event of any discrepancy in translation or interpretation, the Korean ori
 
     </div>
   </section>
-</RenewalLayout>
+</Version1Layout>
 
 <style>
   .legal-page {

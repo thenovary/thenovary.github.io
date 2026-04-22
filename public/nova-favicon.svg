@@ -1,0 +1,126 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="146" y1="120" x2="884" y2="904" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FEFEFF"/>
+      <stop offset="0.55" stop-color="#F2F7FF"/>
+      <stop offset="1" stop-color="#E9F2FF"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="178" y1="264" x2="804" y2="844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDDEB" stop-opacity="0.54"/>
+      <stop offset="0.36" stop-color="#E6F8FF" stop-opacity="0.82"/>
+      <stop offset="0.74" stop-color="#E2E6FF" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orbFill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(472 370) rotate(66.2) scale(490.278)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.16" stop-color="#F7EDFF"/>
+      <stop offset="0.42" stop-color="#D8E7FF"/>
+      <stop offset="0.68" stop-color="#B1F0FF"/>
+      <stop offset="1" stop-color="#8AAEFF"/>
+    </radialGradient>
+    <linearGradient id="ringBack" x1="128" y1="502" x2="892" y2="604" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD8E7" stop-opacity="0.3"/>
+      <stop offset="0.25" stop-color="#DFF7FF" stop-opacity="0.34"/>
+      <stop offset="0.58" stop-color="#C9D2FF" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="ringMid" x1="186" y1="424" x2="906" y2="644" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="0.16" stop-color="#FFF6FB" stop-opacity="0.88"/>
+      <stop offset="0.46" stop-color="#9EF0FF" stop-opacity="0.92"/>
+      <stop offset="0.7" stop-color="#8EA1FF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#A9F4FF" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="ringFront" x1="164" y1="430" x2="864" y2="722" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.12" stop-color="#FFF7FB" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#AAEEFF" stop-opacity="0.96"/>
+      <stop offset="0.58" stop-color="#96A7FF" stop-opacity="0.74"/>
+      <stop offset="0.8" stop-color="#CBFBFF" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="orbBand" x1="278" y1="494" x2="756" y2="644" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="0.22" stop-color="#C6F8FF" stop-opacity="0.66"/>
+      <stop offset="0.54" stop-color="#9AB3FF" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="panelShadow" x="18" y="18" width="988" height="988" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#B8C8E8" flood-opacity="0.24"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#A8B9DB" flood-opacity="0.18"/>
+    </filter>
+    <filter id="softGlow" x="82" y="212" width="876" height="662" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="ringGlow" x="42" y="170" width="948" height="730" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="orbGlow" x="180" y="196" width="678" height="704" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="sparkleGlow" x="152" y="170" width="736" height="626" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <clipPath id="orbClip">
+      <circle cx="512" cy="544" r="252"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#panelShadow)">
+    <rect x="56" y="56" width="912" height="912" rx="236" fill="url(#bg)"/>
+    <rect x="56" y="56" width="912" height="912" rx="236" stroke="white" stroke-opacity="0.92"/>
+  </g>
+
+  <g opacity="0.9" filter="url(#softGlow)">
+    <path d="M184 318C290 228 460 216 622 286C790 358 864 492 846 634C830 754 724 844 564 850C410 856 266 784 192 656C130 548 110 418 184 318Z" fill="url(#beam)"/>
+  </g>
+
+  <g opacity="0.85" filter="url(#ringGlow)">
+    <ellipse cx="506" cy="550" rx="430" ry="286" transform="rotate(12 506 550)" stroke="url(#ringBack)" stroke-width="4"/>
+    <path d="M130 546C258 500 394 474 548 482C686 490 806 536 914 612" stroke="url(#ringMid)" stroke-width="10" stroke-linecap="round" opacity="0.52"/>
+    <path d="M126 420C236 502 352 560 474 618C614 684 732 722 862 740" stroke="url(#ringFront)" stroke-width="24" stroke-linecap="round" opacity="0.92"/>
+  </g>
+
+  <g filter="url(#orbGlow)" opacity="0.78">
+    <ellipse cx="514" cy="602" rx="230" ry="160" fill="#C7D5FF" fill-opacity="0.22"/>
+    <ellipse cx="500" cy="676" rx="170" ry="84" fill="#8DE1FF" fill-opacity="0.16"/>
+  </g>
+
+  <g>
+    <circle cx="512" cy="544" r="252" fill="url(#orbFill)"/>
+    <circle cx="512" cy="544" r="252" stroke="white" stroke-opacity="0.74" stroke-width="4"/>
+    <circle cx="512" cy="544" r="252" fill="white" fill-opacity="0.04"/>
+
+    <g clip-path="url(#orbClip)">
+      <ellipse cx="450" cy="378" rx="180" ry="96" transform="rotate(-16 450 378)" fill="white" fill-opacity="0.16"/>
+      <ellipse cx="440" cy="398" rx="210" ry="120" transform="rotate(-16 440 398)" fill="white" fill-opacity="0.08"/>
+      <path d="M248 502C352 476 452 480 552 504C640 526 720 566 800 622" stroke="url(#orbBand)" stroke-width="112" stroke-linecap="round" opacity="0.82"/>
+      <path d="M228 682C340 648 460 648 574 676C646 694 710 724 780 764" stroke="#85C2FF" stroke-opacity="0.26" stroke-width="124" stroke-linecap="round"/>
+      <path d="M288 646C372 620 462 620 548 638C622 652 688 680 754 718" stroke="#8997FF" stroke-opacity="0.34" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="592" cy="638" rx="92" ry="164" transform="rotate(28 592 638)" fill="#82E4FF" fill-opacity="0.1"/>
+      <ellipse cx="396" cy="718" rx="214" ry="90" transform="rotate(8 396 718)" fill="#8CCEFF" fill-opacity="0.12"/>
+    </g>
+  </g>
+
+  <g filter="url(#sparkleGlow)" opacity="0.9">
+    <circle cx="202" cy="274" r="22" fill="white" fill-opacity="0.18"/>
+    <circle cx="808" cy="402" r="20" fill="white" fill-opacity="0.18"/>
+    <circle cx="164" cy="618" r="22" fill="white" fill-opacity="0.18"/>
+    <circle cx="846" cy="756" r="18" fill="white" fill-opacity="0.18"/>
+    <circle cx="886" cy="748" r="18" fill="white" fill-opacity="0.18"/>
+  </g>
+
+  <g opacity="0.98">
+    <path d="M202 244L208 268L232 274L208 280L202 304L196 280L172 274L196 268L202 244Z" fill="white"/>
+    <path d="M202 252L206 268L222 272L206 276L202 292L198 276L182 272L198 268L202 252Z" fill="#B19CFF"/>
+
+    <path d="M808 378L813 398L833 403L813 408L808 428L803 408L783 403L803 398L808 378Z" fill="white"/>
+    <path d="M808 384L811 398L825 401L811 404L808 418L805 404L791 401L805 398L808 384Z" fill="#B19CFF"/>
+
+    <path d="M164 594L169 614L189 619L169 624L164 644L159 624L139 619L159 614L164 594Z" fill="white"/>
+    <path d="M164 600L167 614L181 617L167 620L164 634L161 620L147 617L161 614L164 600Z" fill="#96AAFF"/>
+
+    <path d="M846 736L850 750L864 754L850 758L846 772L842 758L828 754L842 750L846 736Z" fill="white"/>
+    <path d="M886 728L890 742L904 746L890 750L886 764L882 750L868 746L882 742L886 728Z" fill="white"/>
+  </g>
+</svg>

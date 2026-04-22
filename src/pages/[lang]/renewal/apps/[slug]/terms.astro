@@ -3,13 +3,13 @@
  * App Terms of Service page
  * Route: /[lang]/apps/[slug]/terms/
  */
-import RenewalLayout from '../../../../components/RenewalLayout.astro';
-import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
-import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
+import RenewalLayout from '../../../../../components/RenewalLayout.astro';
+import RenewalAppSubNav from '../../../../../components/RenewalAppSubNav.astro';
+import { getLang, t, getLocalizedName } from '../../../../../i18n/utils';
 
 export async function getStaticPaths() {
   const langs = ['ko', 'en'];
-  const appFiles = import.meta.glob('../../../../data/apps/*.json', { eager: true });
+  const appFiles = import.meta.glob('../../../../../data/apps/*.json', { eager: true });
   const apps = Object.values(appFiles).map((m: any) => m.default ?? m);
   return langs.flatMap(lang =>
     apps.map((app: any) => ({ params: { lang, slug: app.slug }, props: { app } }))
@@ -26,14 +26,13 @@ const sections = app.terms?.sections ?? [];
 
 <RenewalLayout
   lang={lang}
-  basePath=""
   title={`${t(lang, 'appNav.terms')} — ${localizedName}`}
   description={`${localizedName} ${t(lang, 'appNav.terms')}`}
 >
   <section class="section legal-page">
     <div class="container">
 
-      <a href={`/${lang}/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
+      <a href={`/${lang}/renewal/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
 
       <div class="page-header">
         <img src={app.icon} alt={localizedName} class="app-icon" width="48" height="48" />
@@ -43,7 +42,7 @@ const sections = app.terms?.sections ?? [];
         </div>
       </div>
 
-      <RenewalAppSubNav lang={lang} slug={app.slug} active="terms" basePath="" />
+      <RenewalAppSubNav lang={lang} slug={app.slug} active="terms" />
 
       <!-- Legal language notice -->
       <div class="legal-notice">

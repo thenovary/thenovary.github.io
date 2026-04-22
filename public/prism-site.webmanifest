@@ -1,0 +1,22 @@
+{
+  "name": "thenovary",
+  "short_name": "thenovary",
+  "description": "thenovary — Prism clear homepage for the studio and apps.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfcff",
+  "theme_color": "#fbfcff",
+  "icons": [
+    {
+      "src": "/nova-android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/nova-android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

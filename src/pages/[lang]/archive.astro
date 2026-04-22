@@ -1,0 +1,327 @@
+---
+import RenewalLayout from '../../components/RenewalLayout.astro';
+import { getLang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'ko' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const lang = getLang(Astro.params.lang);
+const isKo = lang === 'ko';
+
+const copy = isKo
+  ? {
+      title: '아카이브',
+      eyebrow: '디자인 아카이브',
+      lead: 'thenovary 사이트의 현재 메인 버전과 이전 버전의 디자인들을 한곳에서 볼 수 있습니다.',
+      groups: [
+        {
+          order: 1,
+          label: '버전 1',
+          title: '기존 홈페이지 디자인',
+          previewHref: `/${lang}/version1/?preview=archive`,
+        },
+        {
+          order: 2,
+          label: '현재',
+          title: '현재 메인 사이트',
+          previewHref: `/${lang}/?preview=archive`,
+        },
+      ],
+    }
+  : {
+      title: 'Archive',
+      eyebrow: 'Design Archive',
+      lead: 'Compare the current main site and previous design versions in one place.',
+      groups: [
+        {
+          order: 1,
+          label: 'Version 1',
+          title: 'Original homepage design',
+          previewHref: `/${lang}/version1/?preview=archive`,
+        },
+        {
+          order: 2,
+          label: 'Current',
+          title: 'Current main site',
+          previewHref: `/${lang}/?preview=archive`,
+        },
+      ],
+    };
+---
+
+<RenewalLayout
+  lang={lang}
+  basePath=""
+  title={copy.title}
+  description={copy.lead}
+>
+  <section class="section archive-page">
+    <div class="container archive-shell">
+      <div class="archive-hero glass-card">
+        <p class="archive-eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="archive-lead">{copy.lead}</p>
+      </div>
+
+      <div class="archive-grid">
+        {[...copy.groups].sort((a, b) => b.order - a.order).map((group) => (
+          <article class="archive-card glass-card">
+            <div class="archive-card__head">
+              <span class="archive-card__label">{group.label}</span>
+              <h2>{group.title}</h2>
+            </div>
+
+            <div class="archive-browser">
+              <div class="archive-browser__bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="archive-browser__viewport">
+                <iframe
+                  src={group.previewHref}
+                  title={`${group.title} preview`}
+                  loading="lazy"
+                  tabindex="-1"
+                  scrolling="no"
+                  data-archive-preview
+                ></iframe>
+                <div class="archive-browser__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</RenewalLayout>
+
+<style>
+  .archive-page {
+    --archive-preview-width: 1280px;
+    --archive-preview-height: 680px;
+    --archive-preview-scale: 0.8;
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .archive-shell {
+    display: grid;
+    gap: 22px;
+    max-width: 1160px;
+  }
+
+  .archive-hero,
+  .archive-card {
+    padding: clamp(22px, 3.5vw, 30px);
+  }
+
+  .archive-hero {
+    display: grid;
+    gap: 14px;
+  }
+
+  .archive-eyebrow,
+  .archive-card__label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.74);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .archive-hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    color: var(--color-text-primary);
+  }
+
+  .archive-lead,
+  .archive-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    max-width: 64ch;
+  }
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .archive-card {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .archive-card__head {
+    display: grid;
+    gap: 12px;
+  }
+
+  .archive-card h2,
+  .archive-hero h2 {
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    color: var(--color-text-primary);
+  }
+
+  .archive-browser {
+    position: relative;
+    width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: 34px;
+    background: transparent;
+    border: 0;
+    box-shadow:
+      0 18px 40px rgba(122, 132, 171, 0.08);
+  }
+
+  .archive-browser__bar {
+    display: none;
+  }
+
+  .archive-browser__bar span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(188, 197, 214, 0.9);
+  }
+
+  .archive-browser__bar span:nth-child(1) {
+    background: #ffd7e4;
+  }
+
+  .archive-browser__bar span:nth-child(2) {
+    background: #fff0bc;
+  }
+
+  .archive-browser__bar span:nth-child(3) {
+    background: #d7f6ff;
+  }
+
+  .archive-browser__viewport {
+    position: relative;
+    overflow: hidden;
+    height: calc(var(--archive-preview-height) * var(--archive-preview-scale));
+    border-radius: 34px;
+    background: #f8fbff;
+  }
+
+  .archive-browser__viewport iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--archive-preview-width);
+    height: var(--archive-preview-height);
+    margin-left: calc(var(--archive-preview-width) / -2);
+    border: 0;
+    transform: scale(var(--archive-preview-scale));
+    transform-origin: top center;
+    pointer-events: none;
+    user-select: none;
+    background: white;
+  }
+
+  .archive-browser__overlay {
+    display: none;
+  }
+
+  @media (max-width: 1180px) {
+    .archive-page {
+      --archive-preview-scale: 0.68;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .archive-page {
+      --archive-preview-scale: 0.56;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .archive-page {
+      --archive-preview-scale: 0.4;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .archive-page {
+      --archive-preview-scale: 0.28;
+    }
+  }
+</style>
+
+<script>
+  const sanitizeArchivePreview = (frame) => {
+    try {
+      const doc = frame.contentDocument;
+      const win = frame.contentWindow;
+      if (!doc || !win || !doc.body) return;
+
+      const hideFloatingUi = () => {
+        doc.documentElement.style.setProperty('overflow', 'hidden', 'important');
+        doc.body.style.setProperty('overflow', 'hidden', 'important');
+
+        const footer = doc.querySelector('footer');
+        if (footer) {
+          footer.style.setProperty('display', 'none', 'important');
+        }
+
+        doc.querySelectorAll('*').forEach((el) => {
+          const style = win.getComputedStyle(el);
+          if (style.position !== 'fixed') return;
+
+          const rect = el.getBoundingClientRect();
+          const zIndex = Number(style.zIndex || 0);
+          const isMainHeader =
+            rect.top <= 0 &&
+            rect.height >= 44 &&
+            rect.height <= 96 &&
+            rect.width >= win.innerWidth * 0.7;
+
+          if (isMainHeader) return;
+
+          const nearBottom = rect.bottom >= win.innerHeight - 4;
+          const isFloatingToolbar = rect.height <= 180 && rect.width <= win.innerWidth * 0.9;
+          const highOverlay = zIndex >= 1000 && rect.top >= win.innerHeight * 0.45;
+
+          if ((nearBottom && isFloatingToolbar) || highOverlay) {
+            el.style.setProperty('display', 'none', 'important');
+            el.style.setProperty('opacity', '0', 'important');
+            el.style.setProperty('pointer-events', 'none', 'important');
+          }
+        });
+      };
+
+      hideFloatingUi();
+      win.requestAnimationFrame(hideFloatingUi);
+      win.setTimeout(hideFloatingUi, 120);
+      win.setTimeout(hideFloatingUi, 400);
+
+      const observer = new win.MutationObserver(() => hideFloatingUi());
+      observer.observe(doc.body, { childList: true, subtree: true });
+    } catch {}
+  };
+
+  document.querySelectorAll('iframe[data-archive-preview]').forEach((frame) => {
+    frame.addEventListener('load', () => sanitizeArchivePreview(frame));
+  });
+</script>

@@ -3,8 +3,8 @@
  * App Privacy Policy page
  * Route: /[lang]/apps/[slug]/privacy/
  */
-import Layout from '../../../../components/Layout.astro';
-import AppSubNav from '../../../../components/AppSubNav.astro';
+import RenewalLayout from '../../../../components/RenewalLayout.astro';
+import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
 import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
 
 export async function getStaticPaths() {
@@ -24,8 +24,9 @@ const lastUpdated = app.privacy?.lastUpdated?.[lang] ?? app.privacy?.lastUpdated
 const sections = app.privacy?.sections ?? [];
 ---
 
-<Layout
+<RenewalLayout
   lang={lang}
+  basePath=""
   title={`${t(lang, 'appNav.privacy')} — ${localizedName}`}
   description={`${localizedName} ${t(lang, 'appNav.privacy')}`}
 >
@@ -42,7 +43,7 @@ const sections = app.privacy?.sections ?? [];
         </div>
       </div>
 
-      <AppSubNav lang={lang} slug={app.slug} active="privacy" />
+      <RenewalAppSubNav lang={lang} slug={app.slug} active="privacy" basePath="" />
 
       <!-- Legal language notice -->
       <div class="legal-notice">
@@ -77,7 +78,7 @@ In the event of any discrepancy in translation or interpretation, the Korean ori
 
     </div>
   </section>
-</Layout>
+</RenewalLayout>
 
 <style>
   .legal-page {

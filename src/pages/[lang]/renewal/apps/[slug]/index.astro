@@ -3,13 +3,13 @@
  * App detail — 앱 소개 탭
  * Route: /[lang]/apps/[slug]/
  */
-import RenewalLayout from '../../../../components/RenewalLayout.astro';
-import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
-import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
+import RenewalLayout from '../../../../../components/RenewalLayout.astro';
+import RenewalAppSubNav from '../../../../../components/RenewalAppSubNav.astro';
+import { getLang, t, getLocalizedName } from '../../../../../i18n/utils';
 
 export async function getStaticPaths() {
   const langs = ['ko', 'en'];
-  const appFiles = import.meta.glob('../../../../data/apps/*.json', { eager: true });
+  const appFiles = import.meta.glob('../../../../../data/apps/*.json', { eager: true });
   const apps = Object.values(appFiles).map((m: any) => m.default ?? m);
   return langs.flatMap(lang =>
     apps.map((app: any) => ({ params: { lang, slug: app.slug }, props: { app } }))
@@ -37,12 +37,12 @@ const screenshotCount = app.screenshots?.[lang] ?? app.screenshots?.['ko'] ?? 0;
 const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.slug}/${lang}/${i + 1}.png`);
 ---
 
-<RenewalLayout lang={lang} basePath="" title={localizedName} description={tagline}>
+<RenewalLayout lang={lang} title={localizedName} description={tagline}>
   <section class="section app-detail">
     <div class="container">
 
       <!-- Back link -->
-      <a href={`/${lang}/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
+      <a href={`/${lang}/renewal/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
 
       <!-- App header -->
       <div class="app-header">
@@ -82,7 +82,7 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
       </div>
 
       <!-- Sub navigation -->
-      <RenewalAppSubNav lang={lang} slug={app.slug} active="intro" basePath="" />
+      <RenewalAppSubNav lang={lang} slug={app.slug} active="intro" />
 
       <!-- Screenshots carousel -->
       {screenshots.length > 0 && (
@@ -140,7 +140,6 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
       </span>
     )}
   </div>
-</RenewalLayout>
 </RenewalLayout>
 
 <style>

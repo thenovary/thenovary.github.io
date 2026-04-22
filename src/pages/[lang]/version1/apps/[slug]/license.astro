@@ -3,13 +3,13 @@
  * App License page
  * Route: /[lang]/apps/[slug]/license/
  */
-import RenewalLayout from '../../../../components/RenewalLayout.astro';
-import RenewalAppSubNav from '../../../../components/RenewalAppSubNav.astro';
-import { getLang, t, getLocalizedName } from '../../../../i18n/utils';
+import Version1Layout from '../../../../../components/Version1Layout.astro';
+import Version1AppSubNav from '../../../../../components/Version1AppSubNav.astro';
+import { getLang, t, getLocalizedName } from '../../../../../i18n/utils';
 
 export async function getStaticPaths() {
   const langs = ['ko', 'en'];
-  const appFiles = import.meta.glob('../../../../data/apps/*.json', { eager: true });
+  const appFiles = import.meta.glob('../../../../../data/apps/*.json', { eager: true });
   const apps = Object.values(appFiles).map((m: any) => m.default ?? m);
   return langs.flatMap(lang =>
     apps.map((app: any) => ({ params: { lang, slug: app.slug }, props: { app } }))
@@ -22,16 +22,15 @@ const localizedName = getLocalizedName(app.name, lang);
 const licenses = app.licenses ?? [];
 ---
 
-<RenewalLayout
+<Version1Layout
   lang={lang}
-  basePath=""
   title={`${t(lang, 'appNav.license')} — ${localizedName}`}
   description={`${localizedName} ${t(lang, 'appNav.license')}`}
 >
   <section class="section license-page">
     <div class="container">
 
-      <a href={`/${lang}/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
+      <a href={`/${lang}/version1/`} class="back-link">← {t(lang, 'app.backToHome')}</a>
 
       <div class="page-header">
         <img src={app.icon} alt={localizedName} class="app-icon" width="48" height="48" />
@@ -41,7 +40,7 @@ const licenses = app.licenses ?? [];
         </div>
       </div>
 
-      <RenewalAppSubNav lang={lang} slug={app.slug} active="license" basePath="" />
+      <Version1AppSubNav lang={lang} slug={app.slug} active="license" />
 
       {licenses.length === 0 ? (
         <div class="glass-card empty-state">
@@ -76,7 +75,7 @@ const licenses = app.licenses ?? [];
 
     </div>
   </section>
-</RenewalLayout>
+</Version1Layout>
 
 <style>
   .license-page {

@@ -2,8 +2,8 @@
 /**
  * Contact page — /ko/contact/ and /en/contact/
  */
-import RenewalLayout from '../../components/RenewalLayout.astro';
-import { getLang, t } from '../../i18n/utils';
+import RenewalLayout from '../../../components/RenewalLayout.astro';
+import { getLang, t } from '../../../i18n/utils';
 
 export function getStaticPaths() {
   return [
@@ -88,7 +88,6 @@ const contactGuides = isKo
 
 <RenewalLayout
   lang={lang}
-  basePath=""
   title={t(lang, 'contact.title')}
   description={t(lang, 'contact.subtitle')}
 >

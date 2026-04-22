@@ -1,0 +1,401 @@
+body.prism-renewal {
+  --color-bg: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.7);
+  --color-surface-solid: #ffffff;
+  --color-border: rgba(214, 223, 239, 0.72);
+  --color-text-primary: #171a22;
+  --color-text-secondary: #687083;
+  --color-text-tertiary: #98a0b4;
+  --color-accent: #7587ff;
+  --color-accent-hover: #6275f3;
+  --aurora-blue: rgba(164, 208, 255, 0.2);
+  --aurora-cyan: rgba(181, 243, 255, 0.22);
+  --aurora-violet: rgba(255, 215, 239, 0.16);
+  --shadow-sm: 0 8px 20px rgba(119, 129, 169, 0.08);
+  --shadow-md: 0 18px 48px rgba(119, 129, 169, 0.12);
+  --shadow-lg: 0 24px 64px rgba(119, 129, 169, 0.16);
+  position: relative;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(247, 250, 255, 0.98) 0%, rgba(247, 250, 255, 0.28) 26%, transparent 48%),
+    radial-gradient(circle at 84% 12%, rgba(202, 226, 255, 0.28) 0%, transparent 24%),
+    radial-gradient(circle at 74% 56%, rgba(196, 245, 255, 0.24) 0%, transparent 22%),
+    radial-gradient(circle at 28% 72%, rgba(255, 230, 243, 0.2) 0%, transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 52%, #ffffff 100%);
+}
+
+body.prism-renewal::before {
+  content: '';
+  position: fixed;
+  inset: -18% -14%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      114deg,
+      transparent 14%,
+      rgba(255, 255, 255, 0.96) 23%,
+      rgba(255, 221, 239, 0.54) 31%,
+      rgba(255, 242, 189, 0.48) 38%,
+      rgba(184, 243, 255, 0.56) 48%,
+      rgba(163, 179, 255, 0.46) 58%,
+      rgba(255, 255, 255, 0.94) 69%,
+      transparent 82%
+    );
+  opacity: 0.24;
+  filter: blur(10px);
+  transform: rotate(-14deg) scale(1.08);
+}
+
+body.prism-renewal::after {
+  content: '';
+  position: fixed;
+  inset: auto -12% -8% -10%;
+  height: 42vh;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      96deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.92) 22%,
+      rgba(194, 244, 255, 0.24) 44%,
+      rgba(210, 218, 255, 0.24) 66%,
+      transparent 86%
+    );
+  filter: blur(44px);
+  opacity: 0.5;
+}
+
+body.prism-renewal .aurora-bg::before {
+  top: -16%;
+  left: -8%;
+  width: 62%;
+  height: 62%;
+  background: radial-gradient(circle, rgba(255, 229, 243, 0.56) 0%, rgba(255, 229, 243, 0.16) 46%, transparent 72%);
+  filter: blur(120px);
+}
+
+body.prism-renewal .aurora-bg::after {
+  top: 6%;
+  right: -8%;
+  width: 56%;
+  height: 56%;
+  background: radial-gradient(circle, rgba(182, 219, 255, 0.44) 0%, rgba(182, 219, 255, 0.14) 46%, transparent 72%);
+  filter: blur(120px);
+}
+
+body.prism-renewal .aurora-cyan {
+  left: 16%;
+  width: 52%;
+  height: 52%;
+  background: radial-gradient(circle, rgba(190, 244, 255, 0.42) 0%, rgba(190, 244, 255, 0.12) 46%, transparent 72%);
+  filter: blur(120px);
+}
+
+body.prism-renewal .glass-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.58) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  box-shadow:
+    0 18px 46px rgba(122, 132, 171, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+body.prism-renewal .btn.btn-primary {
+  color: var(--color-text-primary);
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(118deg, #ffdff2 0%, #fff0bf 24%, #b9f5ff 58%, #9eabff 100%) border-box;
+  border: 1px solid transparent;
+  box-shadow:
+    0 14px 34px rgba(132, 145, 205, 0.16),
+    0 0 0 6px rgba(255, 255, 255, 0.45);
+}
+
+body.prism-renewal .btn.btn-primary:hover {
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(118deg, #ffd8ee 0%, #ffedb0 24%, #aef1ff 58%, #8f9eff 100%) border-box;
+  box-shadow:
+    0 18px 38px rgba(132, 145, 205, 0.2),
+    0 0 0 6px rgba(255, 255, 255, 0.52);
+}
+
+body.prism-renewal .btn.btn-secondary {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+body.prism-renewal .btn.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.prism-renewal .gnb {
+  background: rgba(255, 255, 255, 0.62);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 12px 30px rgba(119, 129, 169, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+}
+
+body.prism-renewal .gnb-link:hover,
+body.prism-renewal .gnb-link.is-active {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+body.prism-renewal .lang-toggle {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+body.prism-renewal .lang-btn.is-active {
+  box-shadow:
+    0 10px 24px rgba(119, 129, 169, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+body.prism-renewal .mobile-menu {
+  background: rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.88);
+}
+
+body.prism-renewal .footer {
+  background: rgba(255, 255, 255, 0.76);
+  border-top: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94);
+}
+
+body.prism-renewal .scroll-top-btn {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 16px 34px rgba(119, 129, 169, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+}
+
+body.prism-renewal .scroll-top-btn:hover {
+  box-shadow:
+    0 18px 38px rgba(119, 129, 169, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+body.prism-renewal .app-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.62) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 18px 46px rgba(122, 132, 171, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+body.prism-renewal .app-card:hover {
+  box-shadow:
+    0 22px 52px rgba(122, 132, 171, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+body.prism-renewal .app-card .app-card-icon-wrap {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 12px 26px rgba(122, 132, 171, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+}
+
+body.prism-renewal .app-card .app-card-status {
+  background: rgba(224, 228, 255, 0.88);
+  color: #6b76f6;
+}
+
+body.prism-renewal .app-card:hover .app-card-arrow {
+  color: #6d7df8;
+}
+
+body.prism-renewal .status-badge,
+body.prism-renewal .section-num,
+body.prism-renewal .app-card-status {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent !important;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)) padding-box,
+    linear-gradient(118deg, rgba(255, 221, 239, 0.86) 0%, rgba(255, 241, 188, 0.82) 24%, rgba(186, 244, 255, 0.84) 58%, rgba(163, 179, 255, 0.82) 100%) border-box !important;
+  color: #6575f5 !important;
+  box-shadow:
+    0 10px 20px rgba(122, 132, 171, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  letter-spacing: -0.01em;
+}
+
+body.prism-renewal .status-badge::before,
+body.prism-renewal .app-card-status::before {
+  content: '';
+  position: absolute;
+  inset: -45% 18% auto;
+  height: 18px;
+  border-radius: 999px;
+  background:
+    linear-gradient(100deg, transparent 8%, rgba(255, 255, 255, 0.94) 26%, rgba(255, 230, 243, 0.48) 42%, rgba(194, 245, 255, 0.42) 62%, transparent 84%);
+  opacity: 0.9;
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+body.prism-renewal .status-badge {
+  padding-inline: 10px !important;
+  min-height: 24px;
+  font-weight: 700 !important;
+}
+
+body.prism-renewal .app-card-status {
+  padding-inline: 10px !important;
+  min-height: 24px;
+  font-weight: 700 !important;
+}
+
+body.prism-renewal .mobile-download-bar {
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  box-shadow: 0 -12px 30px rgba(119, 129, 169, 0.1) !important;
+}
+
+body.prism-renewal .carousel-btn {
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 12px 24px rgba(119, 129, 169, 0.14) !important;
+}
+
+body.prism-renewal .legal-notice {
+  background:
+    linear-gradient(135deg, rgba(255, 229, 241, 0.42), rgba(255, 255, 255, 0.88) 44%, rgba(191, 244, 255, 0.34)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 14px 30px rgba(122, 132, 171, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+body.prism-renewal .license-link,
+body.prism-renewal .license-source,
+body.prism-renewal .contact-email {
+  color: #6d7df8 !important;
+}
+
+body.prism-renewal .contact-topic-card {
+  box-shadow: 0 14px 30px rgba(122, 132, 171, 0.1) !important;
+}
+
+body.prism-renewal .contact-topic-index {
+  background:
+    linear-gradient(135deg, rgba(255, 225, 239, 0.72), rgba(255, 255, 255, 0.9) 56%, rgba(190, 245, 255, 0.68)) !important;
+  box-shadow: 0 10px 22px rgba(122, 132, 171, 0.1) !important;
+}
+
+body.prism-renewal .contact-panel::before {
+  background: radial-gradient(circle, rgba(255, 225, 239, 0.28) 0%, rgba(255, 225, 239, 0) 70%) !important;
+}
+
+body.prism-renewal .contact-panel::after {
+  background: radial-gradient(circle, rgba(193, 244, 255, 0.26) 0%, rgba(193, 244, 255, 0) 74%) !important;
+}
+
+body.prism-renewal .contact-email-box {
+  background:
+    linear-gradient(135deg, rgba(255, 229, 241, 0.34), rgba(255, 255, 255, 0.9) 42%, rgba(191, 244, 255, 0.34)),
+    rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 16px 32px rgba(122, 132, 171, 0.1) !important;
+}
+
+body.prism-renewal .origin-graphic::before {
+  background: radial-gradient(circle, rgba(255, 223, 239, 0.3) 0%, rgba(255, 223, 239, 0) 72%) !important;
+}
+
+body.prism-renewal .origin-graphic::after {
+  background: radial-gradient(circle, rgba(193, 244, 255, 0.24) 0%, rgba(193, 244, 255, 0) 72%) !important;
+}
+
+body.prism-renewal .origin-token-nova {
+  background: linear-gradient(135deg, rgba(255, 225, 239, 0.42) 0%, rgba(255, 255, 255, 0.92) 52%, rgba(255, 255, 255, 0.8) 100%) !important;
+}
+
+body.prism-renewal .origin-token-ary {
+  background: linear-gradient(135deg, rgba(193, 244, 255, 0.34) 0%, rgba(255, 255, 255, 0.92) 52%, rgba(255, 255, 255, 0.82) 100%) !important;
+}
+
+body.prism-renewal .fusion-line {
+  background: linear-gradient(90deg, rgba(122, 132, 171, 0), rgba(154, 171, 255, 0.42), rgba(122, 132, 171, 0)) !important;
+}
+
+body.prism-renewal .fusion-ring {
+  border-color: rgba(154, 171, 255, 0.22) !important;
+}
+
+body.prism-renewal .fusion-spark {
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #b8f4ff 34%, #a3b3ff 70%, #ffdce9 100%) !important;
+  box-shadow:
+    0 0 0 8px rgba(154, 171, 255, 0.08),
+    0 0 22px rgba(154, 171, 255, 0.28) !important;
+}
+
+body.prism-renewal .result-card {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 225, 239, 0.34) 0%, rgba(255, 225, 239, 0) 34%),
+    radial-gradient(circle at 88% 18%, rgba(193, 244, 255, 0.28) 0%, rgba(193, 244, 255, 0) 36%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 247, 255, 0.96) 46%, rgba(238, 250, 255, 0.94) 100%) !important;
+  box-shadow: 0 16px 36px rgba(122, 132, 171, 0.12) !important;
+}
+
+body.prism-renewal .result-meta {
+  color: rgba(109, 125, 248, 0.82) !important;
+}
+
+body.prism-renewal .maker-card {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 225, 239, 0.18) 0%, rgba(255, 225, 239, 0) 32%),
+    radial-gradient(circle at 88% 18%, rgba(193, 244, 255, 0.16) 0%, rgba(193, 244, 255, 0) 30%),
+    rgba(255, 255, 255, 0.76) !important;
+}
+
+body.prism-renewal .maker-card::before {
+  background: radial-gradient(circle, rgba(154, 171, 255, 0.12) 0%, rgba(154, 171, 255, 0) 70%) !important;
+}
+
+body.prism-renewal .maker-avatar::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.92) 0%, rgba(193, 244, 255, 0.34) 42%, rgba(193, 244, 255, 0) 74%) !important;
+}
+
+body.prism-renewal .maker-avatar::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 225, 239, 0.3) 42%, rgba(255, 225, 239, 0) 74%) !important;
+}
+
+body.prism-renewal .maker-avatar-shell {
+  box-shadow: 0 18px 32px rgba(122, 132, 171, 0.12) !important;
+}
+
+body.prism-renewal .maker-avatar-shell::before {
+  background:
+    radial-gradient(circle at 26% 24%, rgba(255, 225, 239, 0.28) 0%, rgba(255, 225, 239, 0.03) 44%, rgba(255, 225, 239, 0) 68%),
+    radial-gradient(circle at 76% 24%, rgba(193, 244, 255, 0.24) 0%, rgba(193, 244, 255, 0.03) 42%, rgba(193, 244, 255, 0) 66%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(245, 248, 255, 0.82)) !important;
+  box-shadow: 0 18px 32px rgba(122, 132, 171, 0.12) !important;
+}
+
+body.prism-renewal .maker-avatar-shell::after {
+  background:
+    linear-gradient(135deg, rgba(255, 225, 239, 0.18), rgba(255, 255, 255, 0.04) 44%, rgba(193, 244, 255, 0.18)) !important;
+}
+
+body.prism-renewal .maker-avatar-orbit {
+  background:
+    linear-gradient(135deg, rgba(255, 225, 239, 0.14), rgba(255, 255, 255, 0) 40%, rgba(193, 244, 255, 0.16)) !important;
+  box-shadow: 0 12px 24px rgba(122, 132, 171, 0.08) !important;
+}

@@ -73,6 +73,15 @@ html {
   color-scheme: light;
 }
 
+html.archive-preview-root {
+  scrollbar-width: none;
+}
+
+html.archive-preview-root::-webkit-scrollbar,
+html.archive-preview-root body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -82,6 +91,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+body.archive-preview {
+  overflow: hidden;
 }
 
 img {

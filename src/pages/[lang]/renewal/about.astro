@@ -2,8 +2,8 @@
 /**
  * About page — /ko/about/ and /en/about/
  */
-import RenewalLayout from '../../components/RenewalLayout.astro';
-import { getLang, t } from '../../i18n/utils';
+import RenewalLayout from '../../../components/RenewalLayout.astro';
+import { getLang, t } from '../../../i18n/utils';
 
 export function getStaticPaths() {
   return [
@@ -19,7 +19,6 @@ const isKo = lang === 'ko';
 
 <RenewalLayout
   lang={lang}
-  basePath=""
   title={isKo ? '소개' : 'About'}
   description={isKo ? 'thenovary — 이름의 의미와 브랜드 철학' : 'thenovary — The meaning behind the name and our brand philosophy'}
 >

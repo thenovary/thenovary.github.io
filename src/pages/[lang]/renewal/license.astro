@@ -2,8 +2,8 @@
 /**
  * License page — /ko/license/ and /en/license/
  */
-import RenewalLayout from '../../components/RenewalLayout.astro';
-import { getLang, t, getLocalizedName } from '../../i18n/utils';
+import RenewalLayout from '../../../components/RenewalLayout.astro';
+import { getLang, t, getLocalizedName } from '../../../i18n/utils';
 
 export function getStaticPaths() {
   return [
@@ -14,7 +14,7 @@ export function getStaticPaths() {
 
 const lang = getLang(Astro.params.lang);
 
-const appFiles = import.meta.glob('../../data/apps/*.json', { eager: true });
+const appFiles = import.meta.glob('../../../data/apps/*.json', { eager: true });
 const apps = Object.values(appFiles)
   .map(m => (m as { default: unknown }).default ?? m)
   .sort((a: any, b: any) => b.order - a.order)
@@ -23,7 +23,6 @@ const apps = Object.values(appFiles)
 
 <RenewalLayout
   lang={lang}
-  basePath=""
   title={t(lang, 'license.title')}
   description={t(lang, 'license.subtitle')}
 >

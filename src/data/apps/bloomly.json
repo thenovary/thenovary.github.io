@@ -1,0 +1,337 @@
+{
+  "slug": "bloomly",
+  "order": 6,
+  "icon": "/icons/bloomly.png",
+  "name": {
+    "default": "Bloomly",
+    "ko": "Bloomly",
+    "en": "Bloomly",
+    "ja": "Bloomly"
+  },
+  "tagline": {
+    "ko": "매일 나에게 건네는 긍정 문장 앱",
+    "en": "Daily affirmations to brighten your day"
+  },
+  "description": {
+    "ko": "Bloomly는 하루를 시작할 때 따뜻한 한 문장으로 마음을 가다듬고 싶은 사람을 위한 긍정 확언 앱입니다.\n\n자기사랑, 자신감, 불안 극복, 목표 달성, 관계, 건강, 풍요, 마음챙김 등 원하는 카테고리를 고르고, 오늘의 긍정 문장을 카드 형태로 받아볼 수 있습니다. 카드를 넘기며 여러 문장을 보고, 마음에 드는 문장은 즐겨찾기에 저장하고, 카드 디자인을 꾸며 이미지로 저장하거나 공유할 수 있습니다.\n\nBloomly에서는 알림 시간과 방식, 잠금 화면 프라이버시 모드, 테마, 폰트, 앱 아이콘, 언어를 취향에 맞게 조절할 수 있습니다. 7일 무료 체험으로 전체 기능을 먼저 써보고, 이후에는 평생 이용 잠금 해제를 통해 모든 메시지 카드와 프리미엄 커스터마이징을 계속 사용할 수 있습니다.\n\n별도 회원가입 없이 바로 사용할 수 있고, 선택한 카테고리와 즐겨찾기, 알림·테마 설정 등 대부분의 앱 데이터는 기기에 로컬로 저장됩니다.",
+    "en": "Bloomly is a positive affirmations app for people who want to begin the day with a gentle message and a calmer mindset.\n\nChoose the categories you want to focus on, including self-love, confidence, calm anxiety, goals, relationships, health, abundance, and mindfulness, then receive daily affirmation cards tailored to those selections. You can swipe through cards, save your favorites, and style share cards to save as images or share with others.\n\nBloomly also lets you personalize reminder timing and reminder style, lock-screen privacy mode, themes, fonts, app icons, and language settings. A 7-day free trial can unlock the full experience first, and a lifetime unlock can keep every message card and premium customization available after that.\n\nYou can start using Bloomly without creating an account, and most app data such as selected categories, favorites, reminder settings, and appearance preferences is stored locally on your device."
+  },
+  "screenshots": {
+    "ko": 0,
+    "en": 0
+  },
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "status": {
+    "ko": "출시 예정",
+    "en": "Coming Soon"
+  },
+  "links": {
+    "appStore": "",
+    "googlePlay": ""
+  },
+  "privacy": {
+    "lastUpdated": {
+      "ko": "2026년 4월 24일",
+      "en": "April 24, 2026"
+    },
+    "sections": [
+      {
+        "title": {
+          "ko": "개요",
+          "en": "Overview"
+        },
+        "content": {
+          "ko": "Bloomly는 카테고리 기반 긍정 확언 카드를 제공하는 개인 웰니스 앱입니다. 사용자는 온보딩에서 관심 카테고리, 알림 시간, 테마, 앱 아이콘, 폰트를 고르고, 이후 오늘의 확언 카드 보기, 즐겨찾기 저장, 카드 이미지 저장 및 공유, 알림 설정, 프라이버시 모드, 언어 변경, 무료 체험 또는 유료 잠금 해제 기능을 이용할 수 있습니다.\nBloomly는 별도 회원가입을 요구하지 않으며, 개발자 운영형 계정 시스템이나 클라우드 동기화 서버를 제공하지 않습니다. 대부분의 앱 데이터는 이용자의 기기에 로컬로 저장됩니다.",
+          "en": "Bloomly is a personal wellness app that delivers category-based affirmation cards. During onboarding, users can choose focus categories, reminder time, theme, app icon, and font, then continue using features such as today's affirmation cards, favorites, image saving and sharing, reminder settings, privacy mode, language settings, free trial access, and paid unlock options.\nBloomly does not require account registration and does not provide a developer-operated account system or cloud sync server. Most app data is stored locally on the user's device."
+        }
+      },
+      {
+        "title": {
+          "ko": "처리되는 정보",
+          "en": "Information Processed"
+        },
+        "content": {
+          "ko": "사용자가 선택한 기능에 따라 Bloomly는 기기 내에서 다음과 같은 정보를 처리할 수 있습니다.\n선택한 확언 카테고리, 즐겨찾기한 문장 ID, 언어, 테마, 폰트, 앱 아이콘 등 개인화 설정 정보\n알림 시간, 알림 방식, 카테고리별 알림 시간, 프라이버시 모드 등 알림 설정 정보\n무료 체험 시작일, 평생 이용 잠금 해제 여부, 구매 복원 상태 등 접근 권한 관련 정보\n앱 리뷰 요청 노출 상태와 같은 앱 내 사용 흐름 정보\n이 정보는 주로 기기 내에서 저장·처리되며, 개발자가 별도의 원격 데이터베이스로 직접 수집하지 않습니다.",
+          "en": "Depending on the features you use, Bloomly may process the following information on your device:\nPersonalization settings such as selected affirmation categories, favorite affirmation IDs, language, theme, font, and app icon\nReminder settings such as reminder time, reminder mode, category-specific reminder times, and privacy mode\nAccess-related information such as free-trial start date, lifetime unlock state, and purchase restoration status\nIn-app usage flow data such as review-prompt display state\nThis information is stored and processed primarily on-device, and the developer does not directly collect it into a separate remote database."
+        }
+      },
+      {
+        "title": {
+          "ko": "알림 및 프라이버시 모드",
+          "en": "Notifications and Privacy Mode"
+        },
+        "content": {
+          "ko": "Bloomly는 매일 확언 알림을 제공하기 위해 알림 권한을 요청할 수 있습니다. 사용자는 하루 1번, 하루 여러 번, 카테고리별 알림 방식 중 선택할 수 있으며, 프라이버시 모드를 켜면 잠금 화면에 확언 본문 대신 일반적인 안내 문구만 표시되도록 설정할 수 있습니다.\n프라이버시 모드를 끈 경우 알림에는 선택한 카테고리 또는 확언 미리보기가 포함될 수 있습니다.",
+          "en": "Bloomly may request notification permission in order to provide daily affirmation reminders. Users can choose from once-daily, multiple-daily, or category-based reminder schedules, and privacy mode can be enabled so that only a generic message appears on the lock screen instead of the affirmation text itself.\nWhen privacy mode is turned off, notifications may include category information or a preview of the affirmation."
+        }
+      },
+      {
+        "title": {
+          "ko": "이미지 저장, 공유 및 기기 권한",
+          "en": "Saving Images, Sharing, and Device Permissions"
+        },
+        "content": {
+          "ko": "Bloomly는 확언 카드를 이미지로 저장하거나 외부 앱으로 공유할 수 있도록 지원합니다. 사용자가 카드 이미지를 기기 갤러리에 저장하려는 경우 사진 보관함, 미디어 저장소 또는 관련 시스템 권한이 필요할 수 있습니다.\n사용자가 직접 저장하거나 공유를 선택한 이미지 파일은 운영체제의 저장·공유 기능을 통해 처리되며, 개발자가 자동으로 별도 서버에 업로드하지 않습니다.",
+          "en": "Bloomly supports saving affirmation cards as images and sharing them through external apps. If a user chooses to save a card image to the device gallery, photo library, media storage, or related system permissions may be required.\nImage files that a user explicitly chooses to save or share are handled through the operating system's save and share features, and the developer does not automatically upload them to a separate server."
+        }
+      },
+      {
+        "title": {
+          "ko": "무료 체험, 결제 및 앱 리뷰",
+          "en": "Free Trial, Payments, and App Review"
+        },
+        "content": {
+          "ko": "Bloomly는 앱 내에서 7일 무료 체험 상태를 기기에 로컬로 기록하여 접근 권한을 판단할 수 있습니다. 서비스에서 평생 이용 잠금 해제와 같은 유료 기능이 제공되는 경우, 결제 처리와 구매 복원은 Apple App Store 또는 Google Play와 같은 앱마켓 사업자를 통해 이루어질 수 있습니다.\n또한 사용 흐름에 따라 앱 평점 또는 리뷰 요청 기능이 표시될 수 있으며, 이 기능은 각 플랫폼이 제공하는 서비스에 의해 처리됩니다.",
+          "en": "Bloomly may store a locally managed 7-day free-trial state on the device in order to determine access. If the service offers paid functionality such as a lifetime unlock, payment processing and purchase restoration may be handled through app marketplace providers such as the Apple App Store or Google Play.\nThe app may also display rating or review prompts based on user actions, and such prompts are handled through platform-provided services."
+        }
+      },
+      {
+        "title": {
+          "ko": "제3자 서비스",
+          "en": "Third-Party Services"
+        },
+        "content": {
+          "ko": "Bloomly는 다음과 같은 제3자 서비스 또는 플랫폼 기능을 사용할 수 있습니다.\nApple App Store / Google Play Billing (결제 및 구매 복원)\n운영체제가 제공하는 로컬 알림 기능\n운영체제가 제공하는 사진 저장, 파일 공유, 외부 앱 공유 기능\n앱 리뷰 요청과 관련된 플랫폼 기능\n이들 제공자는 각자의 정책에 따라 독립적으로 정보를 처리할 수 있으며, 개발자는 해당 처리 과정을 직접 통제하지 않습니다.",
+          "en": "Bloomly may use the following third-party services or platform features:\nApple App Store / Google Play Billing (payments and purchase restoration)\nLocal notification services provided by the operating system\nOperating-system features for saving images, sharing files, and opening external share targets\nPlatform review-prompt functionality\nThese providers may process information independently under their own policies, and the developer does not directly control those processing activities."
+        }
+      },
+      {
+        "title": {
+          "ko": "데이터 저장",
+          "en": "Data Storage"
+        },
+        "content": {
+          "ko": "선택한 카테고리, 즐겨찾기, 알림 설정, 테마, 폰트, 아이콘, 무료 체험 상태, 프리미엄 잠금 해제 여부와 같은 대부분의 앱 데이터는 이용자의 기기에 로컬로 저장됩니다. thenovary는 현재 Bloomly 이용 데이터를 위한 개발자 운영형 클라우드 동기화 또는 백업 서버를 제공하지 않습니다.",
+          "en": "Most app data, including selected categories, favorites, reminder settings, theme, font, icon choice, free-trial state, and premium unlock state, is stored locally on the user's device. thenovary does not currently provide a developer-operated cloud sync or backup server for Bloomly user data."
+        }
+      },
+      {
+        "title": {
+          "ko": "데이터 공유",
+          "en": "Data Sharing"
+        },
+        "content": {
+          "ko": "thenovary는 이용자의 개인정보를 판매하지 않습니다. 다만 결제, 구매 복원, 이미지 저장 및 공유, 로컬 알림, 플랫폼 리뷰 요청과 같은 기능 제공에 필요한 범위에서 제3자 제공업체 또는 운영체제 기능이 관련 정보를 처리할 수 있습니다.\n사용자가 직접 확언 카드를 공유하는 경우, 해당 콘텐츠는 사용자가 선택한 외부 서비스의 정책에 따라 처리됩니다.",
+          "en": "thenovary does not sell users' personal information. However, relevant information may be processed by third-party providers or operating-system features to the extent necessary for payments, purchase restoration, image saving and sharing, local notifications, and platform review prompts.\nIf a user explicitly shares an affirmation card, that content will be handled according to the policies of the external service selected by the user."
+        }
+      },
+      {
+        "title": {
+          "ko": "보관 기간 및 이용자 통제",
+          "en": "Retention and User Controls"
+        },
+        "content": {
+          "ko": "대부분의 Bloomly 데이터는 로컬에 저장되므로, 이용자는 카테고리 선택, 즐겨찾기, 알림, 프라이버시 모드, 테마와 같은 설정을 직접 변경할 수 있으며, 앱 삭제를 통해 데이터 보관을 종료할 수 있습니다.\n이미 저장하거나 공유한 카드 이미지, 그리고 앱마켓 구매 기록은 각 저장 위치 또는 플랫폼 정책에 따라 별도로 관리될 수 있습니다.",
+          "en": "Because most Bloomly data is stored locally, users can directly change category choices, favorites, reminders, privacy mode, and appearance settings, and can end local retention by uninstalling the app.\nImages already saved or shared, as well as app marketplace purchase records, may be managed separately according to the storage location or platform policies involved."
+        }
+      },
+      {
+        "title": {
+          "ko": "아동의 개인정보",
+          "en": "Children's Privacy"
+        },
+        "content": {
+          "ko": "Bloomly는 만 13세 미만 아동을 특별히 대상으로 하지 않으며, thenovary는 개발자 운영 계정 시스템을 통해 아동의 개인정보를 고의로 수집하지 않습니다.",
+          "en": "Bloomly is not specifically directed to children under the age of 13, and thenovary does not knowingly collect personal information from children through any developer-operated account system."
+        }
+      },
+      {
+        "title": {
+          "ko": "보안",
+          "en": "Security"
+        },
+        "content": {
+          "ko": "Bloomly는 기기 로컬 저장소와 운영체제가 제공하는 보안 기능에 의존합니다. 서비스의 안전한 사용을 지원하기 위해 합리적인 노력을 기울이지만, 어떠한 저장 또는 전송 방식도 완전한 보안을 보장할 수는 없습니다.",
+          "en": "Bloomly relies on local device storage and the security features provided by the operating system. While reasonable efforts are made to support secure use of the service, no method of storage or transmission can be guaranteed to be completely secure."
+        }
+      },
+      {
+        "title": {
+          "ko": "변경",
+          "en": "Changes to This Policy"
+        },
+        "content": {
+          "ko": "본 개인정보 처리방침은 기능 변경, 법적 요구사항, 제3자 서비스 변경에 따라 수정될 수 있습니다. 개정 시에는 본 페이지에 수정된 시행일과 함께 게시됩니다.",
+          "en": "This Privacy Policy may be updated in response to feature changes, legal requirements, or changes to third-party services. Any revisions will be posted on this page together with an updated effective date."
+        }
+      },
+      {
+        "title": {
+          "ko": "문의",
+          "en": "Contact"
+        },
+        "content": {
+          "ko": "infodeskline@gmail.com",
+          "en": "infodeskline@gmail.com"
+        }
+      }
+    ]
+  },
+  "terms": {
+    "lastUpdated": {
+      "ko": "2026년 4월 24일",
+      "en": "April 24, 2026"
+    },
+    "sections": [
+      {
+        "title": {
+          "ko": "약관 동의",
+          "en": "Acceptance of Terms"
+        },
+        "content": {
+          "ko": "이용자가 Bloomly를 다운로드, 설치, 접속 또는 이용하는 경우 본 약관에 동의한 것으로 봅니다. 본 약관에 동의하지 않는 경우 서비스를 이용할 수 없습니다.",
+          "en": "By downloading, installing, accessing, or using Bloomly, you are deemed to have agreed to these Terms. If you do not agree to these Terms, you may not use the service."
+        }
+      },
+      {
+        "title": {
+          "ko": "서비스 개요",
+          "en": "Service Overview"
+        },
+        "content": {
+          "ko": "Bloomly는 카테고리 기반 긍정 확언 카드와 개인화 기능을 제공하는 앱입니다. 서비스에는 온보딩 중 카테고리, 알림 시간, 테마, 아이콘, 폰트 선택, 오늘의 확언 카드 보기, 즐겨찾기, 공유 카드 저장 및 공유, 알림 설정, 프라이버시 모드, 언어 변경, 무료 체험 및 유료 잠금 해제가 포함될 수 있습니다.\n현재 서비스는 별도 회원가입을 요구하지 않으며, 사용자의 주요 설정과 이용 상태는 이용자의 기기에 로컬로 저장됩니다.",
+          "en": "Bloomly is an app that provides category-based affirmation cards and personalization features. The service may include onboarding selections for categories, reminder time, theme, icon, and font, along with today's affirmation cards, favorites, share card saving and sharing, reminder settings, privacy mode, language settings, free trial access, and paid unlock options.\nThe service currently does not require account registration, and key user settings and access state are stored locally on the user's device."
+        }
+      },
+      {
+        "title": {
+          "ko": "이용권 부여",
+          "en": "License to Use the Service"
+        },
+        "content": {
+          "ko": "운영자는 이용자에게 개인적이고 비상업적인 목적 범위에서, 이용자가 적법하게 보유하거나 관리하는 기기에서 Bloomly를 사용할 수 있는 제한적, 비독점적, 양도 불가능하며 철회 가능한 이용권을 부여합니다.",
+          "en": "The operator grants you a limited, non-exclusive, non-transferable, and revocable license to use Bloomly on devices that you lawfully own or control, solely for personal and non-commercial purposes."
+        }
+      },
+      {
+        "title": {
+          "ko": "개인화 설정과 로컬 저장",
+          "en": "Personalization Settings and Local Storage"
+        },
+        "content": {
+          "ko": "이용자는 선택한 카테고리, 즐겨찾기, 알림 방식, 프라이버시 모드, 테마, 폰트, 앱 아이콘, 언어, 무료 체험 및 잠금 해제 상태와 같은 설정과 결과에 대해 책임을 집니다.\nBloomly는 개발자 운영형 계정 서버나 클라우드 동기화를 제공하지 않으므로, 앱 삭제, 기기 변경 또는 초기화 시 일부 또는 전체 데이터가 복구되지 않을 수 있습니다.",
+          "en": "You are responsible for the settings and outcomes associated with your selected categories, favorites, reminder mode, privacy mode, theme, font, app icon, language, free-trial state, and unlock state.\nBecause Bloomly does not provide a developer-managed account server or cloud sync, some or all data may not be recoverable if the app is deleted, the device is changed, or the device is reset."
+        }
+      },
+      {
+        "title": {
+          "ko": "무료 체험, 평생 이용 잠금 해제 및 결제",
+          "en": "Free Trial, Lifetime Unlock, and Payments"
+        },
+        "content": {
+          "ko": "Bloomly는 앱 내에서 7일 무료 체험 또는 평생 이용 잠금 해제와 같은 접근 방식을 제공할 수 있습니다. 실제 상품 구성, 가격, 제공 방식은 이용 시점의 앱 내 안내와 앱마켓 표시를 기준으로 적용될 수 있습니다.\n평생 이용 잠금 해제와 같은 유료 기능이 제공되는 경우, 결제, 구매 복원, 취소, 환불은 관련 법령 및 Apple App Store, Google Play 등 앱마켓 사업자의 정책에 따라 처리됩니다.",
+          "en": "Bloomly may offer access models such as a 7-day free trial or a lifetime unlock within the app. The actual product structure, pricing, and delivery method may be governed by the in-app information and app marketplace listing available at the time of use.\nIf paid functionality such as a lifetime unlock is offered, billing, purchase restoration, cancellation, and refunds are handled in accordance with applicable law and the policies of app marketplace operators such as the Apple App Store and Google Play."
+        }
+      },
+      {
+        "title": {
+          "ko": "권한 및 기기 기능",
+          "en": "Permissions and Device Features"
+        },
+        "content": {
+          "ko": "서비스는 확언 알림 제공을 위한 알림 권한, 카드 이미지 저장을 위한 사진 또는 미디어 저장 권한, 외부 공유를 위한 운영체제 공유 기능 등 기기 권한과 플랫폼 기능을 사용할 수 있습니다.\n이용자는 이러한 권한 요청을 거부할 수 있으나, 이 경우 일부 기능이 제한되거나 정상적으로 작동하지 않을 수 있습니다.",
+          "en": "The service may use device permissions and platform features such as notification permission for affirmation reminders, photo or media-storage access for saving card images, and operating-system share functionality for external sharing.\nYou may decline such permission requests, but doing so may limit or prevent certain features from functioning properly."
+        }
+      },
+      {
+        "title": {
+          "ko": "이용자 책임 및 공유 기능",
+          "en": "User Responsibility and Sharing Features"
+        },
+        "content": {
+          "ko": "이용자는 앱을 통해 저장하거나 외부에 공유하는 확언 카드 이미지와 그 사용 결과에 대해 책임을 집니다. 외부 서비스로의 공유는 사용자가 직접 선택한 동작에 따라 이루어지며, 해당 외부 서비스의 정책과 이용약관이 적용될 수 있습니다.",
+          "en": "You are responsible for any affirmation card images you save or share externally through the app and for the consequences of such use. Sharing to external services occurs only through actions that you explicitly choose, and the policies and terms of the selected external service may apply."
+        }
+      },
+      {
+        "title": {
+          "ko": "금지행위",
+          "en": "Prohibited Conduct"
+        },
+        "content": {
+          "ko": "이용자는 서비스의 정상적인 운영을 방해하거나, 무단 접근을 시도하거나, 접근 제한 또는 유료 흐름을 비정상적으로 우회하거나, 관련 법령이 허용하는 범위를 넘는 역분석을 하거나, 타인의 권리를 침해하거나, 기타 법령 또는 공서양속에 반하는 행위를 하여서는 안 됩니다.",
+          "en": "You may not interfere with the normal operation of the service, attempt unauthorized access, abnormally bypass access restrictions or paid flows, reverse engineer the app beyond what is permitted by applicable law, infringe the rights of others, or engage in any conduct that violates applicable law or public order and morals."
+        }
+      },
+      {
+        "title": {
+          "ko": "제3자 서비스",
+          "en": "Third-Party Services"
+        },
+        "content": {
+          "ko": "서비스는 Apple App Store, Google Play Billing, 운영체제 알림 기능, 이미지 저장 및 공유 기능, 플랫폼 리뷰 요청 기능 등 제3자 서비스 또는 플랫폼 기능에 의존할 수 있습니다. 해당 서비스의 정책 변경, 장애, 중단 또는 과금 정책은 운영자의 통제 범위를 벗어날 수 있습니다.",
+          "en": "The service may rely on third-party services or platform features such as the Apple App Store, Google Play Billing, operating-system notification services, image saving and sharing features, and platform review-prompt functionality. Changes in policy, outages, discontinuation, or billing practices for those services may be outside the operator's control."
+        }
+      },
+      {
+        "title": {
+          "ko": "서비스 변경 및 중단",
+          "en": "Service Changes and Suspension"
+        },
+        "content": {
+          "ko": "운영자는 서비스의 전부 또는 일부를 업데이트, 수정, 제한 또는 중단할 수 있습니다. 유지보수, 기기 환경, 네트워크 상태, 앱마켓 정책, 제3자 서비스 장애 등에 따라 일부 기능이 일시적으로 또는 지속적으로 제한될 수 있습니다.\n이용자는 언제든지 앱 삭제를 통해 서비스 이용을 종료할 수 있습니다.",
+          "en": "The operator may update, modify, restrict, or discontinue all or part of the service. Certain features may be temporarily or permanently limited due to maintenance, device conditions, network status, app marketplace policies, or third-party service outages.\nYou may stop using the service at any time by uninstalling the app."
+        }
+      },
+      {
+        "title": {
+          "ko": "면책 및 책임 제한",
+          "en": "Disclaimer and Limitation of Liability"
+        },
+        "content": {
+          "ko": "서비스는 관련 법령이 허용하는 범위에서 현 상태 그대로 제공됩니다. 운영자는 이용자의 기기, 운영체제, 네트워크 환경, 앱 삭제, 기기 변경, 권한 거부, 외부 공유 또는 제3자 서비스 사정으로 발생하는 데이터 손실, 기능 제한, 사용상 손해에 대하여 법령상 허용되는 범위에서 책임을 제한할 수 있습니다.",
+          "en": "The service is provided on an as-is basis to the extent permitted by applicable law. To the extent allowed by law, the operator may limit liability for data loss, feature restrictions, or usage-related damages arising from the user's device, operating system, network conditions, app deletion, device changes, denied permissions, external sharing, or third-party services."
+        }
+      },
+      {
+        "title": {
+          "ko": "문의",
+          "en": "Contact"
+        },
+        "content": {
+          "ko": "서비스 관련 문의는 아래 이메일로 접수할 수 있습니다.\ninfodeskline@gmail.com",
+          "en": "Questions regarding the service may be sent to:\ninfodeskline@gmail.com"
+        }
+      }
+    ]
+  },
+  "support": {
+    "email": "infodeskline@gmail.com",
+    "sections": [
+      {
+        "title": {
+          "ko": "문의 및 피드백",
+          "en": "Questions and Feedback"
+        },
+        "content": {
+          "ko": "Bloomly 사용 중 오류, 번역 수정 제안, UX 피드백이 있다면 이메일로 알려주세요. 문의 시 기기 모델, OS 버전, 앱 버전, 문제 상황을 함께 보내주시면 확인이 더 빨라집니다.",
+          "en": "If you run into a bug, notice a translation issue, or want to share UX feedback while using Bloomly, feel free to email us. Including your device model, OS version, app version, and a short description of the issue helps us investigate faster."
+        }
+      },
+      {
+        "title": {
+          "ko": "알림 및 프라이버시 모드",
+          "en": "Reminders and Privacy Mode"
+        },
+        "content": {
+          "ko": "알림이 오지 않는 경우 먼저 기기 알림 권한과 절전 설정을 확인해 주세요. 잠금 화면에 긍정 문장 본문이 보이는 것이 부담스럽다면 설정에서 프라이버시 모드를 켜서 일반 안내 문구만 표시되도록 바꿀 수 있습니다.",
+          "en": "If reminders are not arriving, please first check your notification permission and any battery-saving settings on your device. If you do not want affirmation text to appear on your lock screen, you can enable privacy mode in Settings so only a generic reminder message is shown."
+        }
+      },
+      {
+        "title": {
+          "ko": "저장, 공유, 체험 및 잠금 해제 안내",
+          "en": "Saving, Sharing, Trial, and Unlock Help"
+        },
+        "content": {
+          "ko": "카드 이미지를 저장할 때 권한 요청이 보일 수 있으며, 외부 공유는 사용자가 직접 선택한 앱을 통해 진행됩니다. 무료 체험 또는 평생 이용 잠금 해제 상태가 예상과 다를 경우, 사용 중인 앱마켓 계정과 구매 복원 시도 여부를 함께 알려주시면 확인에 도움이 됩니다.",
+          "en": "You may see permission prompts when saving card images, and external sharing is handled through the app you explicitly choose from the system share sheet. If your free-trial or lifetime-unlock status does not look right, letting us know which app marketplace account you are using and whether you tried restoring purchases will help us troubleshoot."
+        }
+      }
+    ]
+  },
+  "licenses": []
+}

@@ -23,6 +23,9 @@ const localizedName = getLocalizedName(app.name, lang);
 const description = app.description?.[lang] ?? app.description?.['en'] ?? '';
 const tagline = app.tagline?.[lang] ?? app.tagline?.['en'] ?? '';
 const platformsNote = app.platformsNote?.[lang] ?? app.platformsNote?.['en'] ?? '';
+const isWebProject = app.projectType === 'web';
+const websiteUrl = app.links?.website ?? '';
+const hasWebsite = typeof websiteUrl === 'string' && websiteUrl.trim().length > 0;
 const status =
   app.status?.[lang] ??
   app.status?.['en'] ??
@@ -56,27 +59,43 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
         </div>
         <!-- Desktop download buttons (hidden on mobile) -->
         <div class="download-row desktop-only">
-          {app.links?.appStore ? (
-            <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
-              <span class="download-label">{t(lang, 'app.downloadOn')}</span>
-              <span class="download-store">{t(lang, 'app.appStore')}</span>
-            </a>
+          {isWebProject ? (
+            hasWebsite ? (
+              <a href={websiteUrl} class="btn btn-secondary download-btn download-btn-single" target="_blank" rel="noopener noreferrer">
+                <span class="download-label">{lang === 'ko' ? '사이트 보기' : 'Visit Website'}</span>
+                <span class="download-store">{lang === 'ko' ? 'Bloomly Web' : 'Bloomly Web'}</span>
+              </a>
+            ) : (
+              <span class="btn btn-secondary download-btn btn-disabled download-btn-single">
+                <span class="download-label">{lang === 'ko' ? '웹 프로젝트' : 'Web Project'}</span>
+                <span class="download-store">{lang === 'ko' ? '페이지 준비 중' : 'Page Coming Soon'}</span>
+              </span>
+            )
           ) : (
-            <span class="btn btn-secondary download-btn btn-disabled">
-              <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
-              <span class="download-store">{t(lang, 'app.appStore')}</span>
-            </span>
-          )}
-          {app.links?.googlePlay ? (
-            <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
-              <span class="download-label">{t(lang, 'app.downloadOn')}</span>
-              <span class="download-store">{t(lang, 'app.googlePlay')}</span>
-            </a>
-          ) : (
-            <span class="btn btn-secondary download-btn btn-disabled">
-              <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
-              <span class="download-store">{t(lang, 'app.googlePlay')}</span>
-            </span>
+            <>
+              {app.links?.appStore ? (
+                <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
+                  <span class="download-label">{t(lang, 'app.downloadOn')}</span>
+                  <span class="download-store">{t(lang, 'app.appStore')}</span>
+                </a>
+              ) : (
+                <span class="btn btn-secondary download-btn btn-disabled">
+                  <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
+                  <span class="download-store">{t(lang, 'app.appStore')}</span>
+                </span>
+              )}
+              {app.links?.googlePlay ? (
+                <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
+                  <span class="download-label">{t(lang, 'app.downloadOn')}</span>
+                  <span class="download-store">{t(lang, 'app.googlePlay')}</span>
+                </a>
+              ) : (
+                <span class="btn btn-secondary download-btn btn-disabled">
+                  <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
+                  <span class="download-store">{t(lang, 'app.googlePlay')}</span>
+                </span>
+              )}
+            </>
           )}
         </div>
       </div>
@@ -116,30 +135,41 @@ const screenshots = Array.from({ length: screenshotCount }, (_, i) => `/${app.sl
   </section>
 
   <!-- Mobile floating download bar (outside container for correct fixed positioning) -->
-  <div class="mobile-download-bar mobile-only">
-    {app.links?.appStore ? (
-      <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
-        <span class="download-label">{t(lang, 'app.downloadOn')}</span>
-        <span class="download-store">{t(lang, 'app.appStore')}</span>
-      </a>
-    ) : (
-      <span class="btn btn-secondary download-btn btn-disabled">
-        <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
-        <span class="download-store">{t(lang, 'app.appStore')}</span>
-      </span>
-    )}
-    {app.links?.googlePlay ? (
-      <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
-        <span class="download-label">{t(lang, 'app.downloadOn')}</span>
-        <span class="download-store">{t(lang, 'app.googlePlay')}</span>
-      </a>
-    ) : (
-      <span class="btn btn-secondary download-btn btn-disabled">
-        <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
-        <span class="download-store">{t(lang, 'app.googlePlay')}</span>
-      </span>
-    )}
-  </div>
+  {(isWebProject ? hasWebsite : true) && (
+    <div class="mobile-download-bar mobile-only">
+      {isWebProject ? (
+        <a href={websiteUrl} class="btn btn-secondary download-btn download-btn-single" target="_blank" rel="noopener noreferrer">
+          <span class="download-label">{lang === 'ko' ? '사이트 보기' : 'Visit Website'}</span>
+          <span class="download-store">{lang === 'ko' ? 'Bloomly Web' : 'Bloomly Web'}</span>
+        </a>
+      ) : (
+        <>
+          {app.links?.appStore ? (
+            <a href={app.links.appStore} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
+              <span class="download-label">{t(lang, 'app.downloadOn')}</span>
+              <span class="download-store">{t(lang, 'app.appStore')}</span>
+            </a>
+          ) : (
+            <span class="btn btn-secondary download-btn btn-disabled">
+              <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
+              <span class="download-store">{t(lang, 'app.appStore')}</span>
+            </span>
+          )}
+          {app.links?.googlePlay ? (
+            <a href={app.links.googlePlay} class="btn btn-secondary download-btn" target="_blank" rel="noopener noreferrer">
+              <span class="download-label">{t(lang, 'app.downloadOn')}</span>
+              <span class="download-store">{t(lang, 'app.googlePlay')}</span>
+            </a>
+          ) : (
+            <span class="btn btn-secondary download-btn btn-disabled">
+              <span class="download-label">{lang === 'ko' ? '출시 예정' : 'Coming Soon'}</span>
+              <span class="download-store">{t(lang, 'app.googlePlay')}</span>
+            </span>
+          )}
+        </>
+      )}
+    </div>
+  )}
 </RenewalLayout>
 </RenewalLayout>
 
